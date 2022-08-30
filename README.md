@@ -6,7 +6,7 @@ Day 2: Microsoft Sentinel
 
 # Prerequesites for Azure Security Training
 
-> ❗These prerequesites **MUST** be done **BEFORE** you show up for the first day ❗
+> ❗These prerequesites **MUST** be done **BEFORE** you show up for the first day ❗<br>
 > The lab environment will be used both for Defender for Cloud and Sentinel.
 
 To get full use of these days you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
