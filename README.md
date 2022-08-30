@@ -195,17 +195,17 @@ Enable integration with Azure Sentinel
 1.	On the Azure portal, navigate to **Azure Sentinel** service or [click here](https://portal.azure.com/#blade/Microsoft_Azure_Security_Insights/WorkspaceSelectorBlade).
 2.	On the Azure Sentinel workspaces, click on **+ Create** workspace button – for this exercise we’ll use the same Log Analytics workspace used by Microsoft Defender for Cloud.
 
-![](../Images/lab7sent.gif?raw=true)
+![](./Defender4Cloud/Images/lab7sent.gif?raw=true)
 
 3.	On the **Add Azure Sentinel** to a workspace, select **asclab-la-xxx** workspace. Click **New** on the top bar, or click **Create Azure Sentinel**. 
 4.	Adding Azure Sentinel to workspace asclab-la-xxx is now in progress. The process will few minutes. 
 5.	Once Sentinel News and guides opens, use the Microsoft Defender for Cloud connector to enable the integration.
 6.	From Sentinel’s sidebar, click on the **Data connectors**.
 7.	On the Data connectors page, use the search field and type: **Microsoft Defender for Cloud** and select it, and then click on **Open connector page**.
-![](../Images/mdfc-sentinelcon.png?raw=true)
+![](./Defender4Cloud/Images/mdfc-sentinelcon.png?raw=true)
 
 8.	On the Configuration section, locate the **Azure subscription 1** and change the Status toggle button to **Connect**. Wait for the connection status to be: `Connected`.
-![](../Images/mdfc-sentinelconfig.png?raw=true)
+![](./Defender4Cloud/Images/mdfc-sentinelconfig.png?raw=true)
 
 9. Ensure that **Bi-directional sync** is **Enabled**.
 
