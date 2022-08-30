@@ -19,6 +19,7 @@ Module 1 represents the prerequesites. the whole module must be completed!
 - Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
 - Step 2: Provision the resources in this lab
 - Step 3: Enable Microsoft Defender for Cloud
+- Step 4: Enable Microsoft Sentinel
 <br>
 - Step 4: Bring your computer to the workshop on the workshop day, and remember your username and password so you have access to the lab.
 
@@ -184,6 +185,37 @@ When the deployment is complete, you should see the following:
 > * To enable Microsoft Defender for Cloud on a subscription, you must be assigned the role of Subscription Owner, Subscription Contributor, or Security Admin
 
 
+<br>
+<br>
+
+## Step 4: Enable Microsoft Sentinel
+
+Enable integration with Azure Sentinel
+
+1.	On the Azure portal, navigate to **Azure Sentinel** service or [click here](https://portal.azure.com/#blade/Microsoft_Azure_Security_Insights/WorkspaceSelectorBlade).
+2.	On the Azure Sentinel workspaces, click on **+ Create** workspace button – for this exercise we’ll use the same Log Analytics workspace used by Microsoft Defender for Cloud.
+
+![](../Images/lab7sent.gif?raw=true)
+
+3.	On the **Add Azure Sentinel** to a workspace, select **asclab-la-xxx** workspace. Click **New** on the top bar, or click **Create Azure Sentinel**. 
+4.	Adding Azure Sentinel to workspace asclab-la-xxx is now in progress. The process will few minutes. 
+5.	Once Sentinel News and guides opens, use the Microsoft Defender for Cloud connector to enable the integration.
+6.	From Sentinel’s sidebar, click on the **Data connectors**.
+7.	On the Data connectors page, use the search field and type: **Microsoft Defender for Cloud** and select it, and then click on **Open connector page**.
+![](../Images/mdfc-sentinelcon.png?raw=true)
+
+8.	On the Configuration section, locate the **Azure subscription 1** and change the Status toggle button to **Connect**. Wait for the connection status to be: `Connected`.
+![](../Images/mdfc-sentinelconfig.png?raw=true)
+
+9. Ensure that **Bi-directional sync** is **Enabled**.
+
+> **Note on Microsoft Defender for Cloud & Sentinel bi-directional alerts:**
+When you connect Microsoft Defender for Cloud to Azure Sentinel, the status of Microsoft Defender for Cloud alerts that get ingested into Azure Sentinel is synchronized between the two services. So, for example, when an alert is closed in Microsoft Defender for Cloud, that alert will display as closed in Azure Sentinel as well. Changing the status of an alert in Microsoft Defender for Cloud "won't"* affect the status of any Azure Sentinel incidents that contain the synchronized Azure Sentinel alert, only that of the synchronized alert itself.<br/>
+Enabling this preview feature, bi-directional alert synchronization, will automatically sync the status of the original Microsoft Defender for Cloud alerts with Azure Sentinel incidents that contain the copies of those Microsoft Defender for Cloud alerts. So, for example, when an Azure Sentinel incident containing an Microsoft Defender for Cloud alert is closed, Microsoft Defender for Cloud will automatically close the corresponding original alert.
+
+
+<br>
+<br>
 
 ## Confirmation
 To confirm you have successfully deployd the lab and are ready for the workshop, please send an email to: 
