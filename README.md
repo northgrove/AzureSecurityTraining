@@ -6,8 +6,8 @@ Day 2: Microsoft Sentinel
 
 # Prerequesites for Azure Security Training
 
-These prerequesites **MUST** be done **BEFORE** you show up for the first day.
-The lab environment will be used both for Defender for Cloud and Sentinel.
+> ❗These prerequesites **MUST** be done **BEFORE** you show up for the first day ❗
+> The lab environment will be used both for Defender for Cloud and Sentinel.
 
 To get full use of these days you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
 
@@ -39,6 +39,7 @@ To use these labs, you should have Azure Subscription Trial, this allows you to 
 - **No automatic charges** – During the registration process, you should enter your credit card information to complete the identity verification process. 
 > ⚠️ Warning: you won't be charged unless you choose to upgrade the subscription.
 Before the end of your first 30 days, you'll be notified and have the chance to upgrade and start paying only for the resources you use beyond the free amounts.
+> The organizor or instructor, etc taks no responsibility for any cost this lab my generate in your subscription.
 
 ### Instructions:
 1. Open an **In-Private** session in your web browser and navigate to https://azure.microsoft.com/en-us/free
