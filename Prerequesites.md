@@ -1,15 +1,10 @@
-# AzureSecurityTraining
-Azure Security Training is a two day workshop.
-Day 1: Defender for Cloud
-Day 2: Microsoft Sentinel
-
-
 # Prerequesites for Azure Security Training
 
-These prerequesites **MUST** be done **BEFORE** you show up for the first day.
-The lab environment will be used both for Defender for Cloud and Sentinel.
+These prerequesites **MUST** be done **BEFORE** you show up for the first day:
 
-To get full use of these days you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
+
+
+To get full use of this one day you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
 
 Module 1 represents the prerequesites. the whole module must be completed!
 - Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
@@ -17,19 +12,16 @@ Module 1 represents the prerequesites. the whole module must be completed!
 - Step 3: Enable Microsoft Defender for Cloud
 
 
-### Objectives
+## Objectives
 Create a new Microsoft Account enable with Azure Trial Subscription 
 This section is intended to deploy Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
-
-#### Make sure ...
+#### Prerequisites
 Before you start this lab, make sure you have the following prerequisites:
 - **Supported web browser** (Microsoft Edge, Google Chrome, Safari, Firefox Mozilla)
     - For using these labs, **we recommend to open an incognito/in-private browser session** on your machine and login to Azure Portal to avoid conflicts with existing Azure Subscriptions/environments if already being used.
  - **Microsoft Account** - If you do not have an existing account Sign-up to create a free account: https://signup.live.com
   
-<br>
-<br>
 
 ## Step 1: Creating an Azure Trial Subscription
 
@@ -51,8 +43,7 @@ Important - Make sure you are not logged in with your corporate user.
 
 <br>
 <br>
-
-## Step 2: Provisioning resources
+### Exercise 2: Provisioning resources
 
 > ❗ Important: <br>
 > You should also be accessing the Microsoft Defender for Cloud labs in the same private window. Otherwise, link from the lab will be open on a non-private window. 
@@ -84,12 +75,12 @@ After the deployment of the template, you can check the progress of your deploym
 Continue with the exercise below until the deployment has completed.
 <br><br>
 
-<img src="./Defender4Cloud/Images/asc-lab-architecture.svg?raw=true">
+<img src="../Images/asc-lab-architecture.svg?raw=true">
 <br>
 
 1. Prepare your lab environment by clicking on the blue **Deploy to Azure** button below:
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Flabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Security-Center%2Fmaster%2FLabs%2FFiles%2Flabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
 2.	You will be redirected to Azure Portal > custom deployment page where you should specify mandatory fields for deployment.
 3.	On the subscription field, select **Azure subscription 1**.
@@ -103,37 +94,36 @@ Continue with the exercise below until the deployment has completed.
 > The *deployment is in progress* page continues to update and show the resources being uploaded to the environment assuming the deployment is successful.  
 > During the deployment, additional resource group will be created automatically for Kubernetes resources named as “asclab-aks”.<br>
 
-<p align="left"><img src="./Defender4Cloud/Images/deploy-to-azure.gif?raw=true"></p>
+<p align="left"><img src="../Images/deploy-to-azure.gif?raw=true"></p>
 
 You can also check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (*1 deploying*). <br>
 
-![Template deployment is in progress](./Defender4Cloud/Images/asc-deployment-in-progress.gif?raw=true)
+![Template deployment is in progress](../Images/asc-deployment-in-progress.gif?raw=true)
 
 When the deployment is complete, you should see the following:
 
-![Template deployment completed](./Defender4Cloud/Images/asc-deployment-completed.gif?raw=true)
+![Template deployment completed](../Images/asc-deployment-completed.gif?raw=true)
 
 
 
 <br>
 <br>
-
-## Step 3: Enabling Microsoft Defender for Cloud
+### Exercise 3: Enabling Microsoft Defender for Cloud
 
 #### Subscription upgrade and agents installation
 1. Open **Azure Portal** and navigate to **Microsoft Defender for Cloud** blade.
 2. Click on **Getting started** page from the left pane, On the **Upgrade** Tab, select subscription (Azure subscription 1) and press **Upgrade**.
    >Note: You may need to wait for a few minutes for the upgrade to complete.
 3. Select both **Azure subscription 1**, and also the **workspace name** underneath it. Click on **Upgrade** to upgrade.
-   ![Template deployment completed](./Defender4Cloud/Images/mdfc-gettingstarted.png?raw=true)
+   ![Template deployment completed](../Images/mdfc-gettingstarted.png?raw=true)
 
 4. Select the **Azure Subscription 1** and click **Install agents** to install agents to the resources in the subscription.
 
-   ![Install Agents](./Defender4Cloud/Images/mdfc-installagents.png?raw=true)
+   ![Install Agents](../Images/mdfc-installagents.png?raw=true)
 
 #### Get the status of the Defender coverage on the subscription and the workspace
 1. Return to Microsoft Defender for Cloud blade and Click on **Environment settings**. Click the down arrow on **Azure** to show the subscription, and then click the down arrow on **Azure Susbcription 1** to show the workspace. Notice the Defender coverage is 11/11 plans for the subscription and 2/2 plans for the workspace, meaning that you are now fully protected using Microsoft Defender for Cloud.
-    ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings.png?raw=true)
+    ![Environment settings](../Images/mdfc-envsettings.png?raw=true)
 
 2. Click on **Azure subscription 1**, and notice how all Microsoft Defender for Cloud plans are enabled. 
 
@@ -141,11 +131,11 @@ When the deployment is complete, you should see the following:
 
 3. Exit that screen, and then select the workspace from the previous screen. 
    
-    ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings2.png?raw=true)
+    ![Environment settings](../Images/mdfc-envsettings2.png?raw=true)
 
 4. Ensure that both plans for **Servers** and **SQL servers on machines** are turned **On**.
 
-![Environment settings](./Defender4Cloud/Images/mdfc-workspaceenvsettings.png?raw=true)
+![Environment settings](../Images/mdfc-workspaceenvsettings.png?raw=true)
 
 
 #### Configure the data collection settings in Microsoft Defender for Cloud
@@ -153,14 +143,14 @@ When the deployment is complete, you should see the following:
 1. Go back to the **Environment settings** in the sidebar and drill down into your **Azure subscription** (Azure subscription 1).
 2. Navigate to **Auto provisioning**
 
-![Auto-provisioning](./Defender4Cloud/Images/mdfc-autoprovisioning.png?raw=true)
+![Auto-provisioning](../Images/mdfc-autoprovisioning.png?raw=true)
 
 5. On the **Auto provisioning - Extensions** page, set **Log Analytics agent for Azure VMs** to **On** (if it's not already set to On)
 6. Click **Edit configuration** under the configuration column.
 7. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
 8. Under **Store additional raw data - Windows security events** section, select **All Events** option.
 
-![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/asc-extension-deployment-configuration.gif?raw=true)
+![Enable Microsoft Defender for Cloud on the workspace level](../Images/asc-extension-deployment-configuration.gif?raw=true)
 
 9. Select **Existing and new VMs** in the pop-up.
 10. Click on **Apply**.
@@ -173,9 +163,3 @@ When the deployment is complete, you should see the following:
 > * Before clicking on the Upgrade button, you can review the total number of resources you are going to enable Microsoft Defender for Cloud on.
 > * You can enable Microsoft Defender for Cloud trial for 30-days on a subscriptions only if not previously used.
 > * To enable Microsoft Defender for Cloud on a subscription, you must be assigned the role of Subscription Owner, Subscription Contributor, or Security Admin
-
-
-
-## Confirmation
-To confirm you have successfully deployd the lab and are ready for the workshop, please send an email to: 
-

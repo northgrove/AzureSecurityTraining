@@ -8,15 +8,16 @@
 This is a fork from [Microsoft Defender for Cloud Labs!](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Labs) adjusted to provide a one day workshop with Defender for Cloud training. For full version see the orgiginal repo.
 
 
-## Prerequisites
+## Prerequisites - OBS! Must be done **before** the workshop
 
-To get full use of this one day you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you *must* deploy this lab to a new subscription *before* you meet up for the workshop.
+To get full use of this one day you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
 
 Module 1 represents the prerequesites. the whole module must be completed!
 - Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
 - Step 2: Provision the resources in this lab
 - Step 3: Enable Microsoft Defender for Cloud
 
+See this README for full description of the prerequisites: [**Prerequisites for Azure Security Trainging**](../README.md)
 
 
 
@@ -65,6 +66,8 @@ Module 1 represents the prerequesites. the whole module must be completed!
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
 - [File Integrity Monitoring](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-3-file-integrity-monitoring)
 
+
+## Skill level
 
 <p align="center">
 <img src="./Images/asc-labs-levels.png?raw=true">
