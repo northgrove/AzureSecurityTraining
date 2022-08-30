@@ -111,3 +111,4 @@ Once a vulnerable image has been pushed to the Azure Container Registry registry
  ![Debian](../Images/11debian.png?raw=true)
  
 
+### Continue with the next lab: [Module 12 – Defender for Azure Comos DB](Module-12-Defender-for-Azure-Comos-DB.md)

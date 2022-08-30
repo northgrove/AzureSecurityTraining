@@ -1,3 +1,7 @@
+<p align="center">
+<img src="./Defender4Cloud/Images/asc-labs-logo.png?raw=true">
+</p>
+
 # AzureSecurityTraining
 Azure Security Training is a two day workshop.
 Day 1: Defender for Cloud

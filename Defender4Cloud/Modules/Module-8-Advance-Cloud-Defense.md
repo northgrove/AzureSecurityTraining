@@ -67,3 +67,6 @@ It maps the current state of these items with the state during the previous scan
 You'll now be able to track changes to files in resource associated with the log analytics workspace.
 
 ![](../Images/mdfc-fimtrack.png?raw=true)
+
+
+### Continue with the next lab: [Module 9 – Defender for Containers](Module-9-Defender-for-Containers.md)
