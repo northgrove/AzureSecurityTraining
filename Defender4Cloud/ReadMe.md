@@ -25,7 +25,10 @@ See this README for full description of the prerequisites: [**Prerequisites for 
 
 [**Module 1 – Prerequisites - Preparing the Environment (L100)**](../README.md)
 
- 
+
+To be done on the Workshop day:
+[**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
+
 [**Module 2 – Exploring Microsoft Defender for Cloud (L100)**](./Modules/Module-2-Exploring-Azure-Security-Center.md)
 - [Understanding Microsoft Defender for Cloud dashboard](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-1-understanding-azure-security-center-dashboard)
 - [Exploring Secure Score and Recommendations](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-2-exploring-secure-score-and-recommendations)
@@ -55,10 +58,6 @@ See this README for full description of the prerequisites: [**Prerequisites for 
 - [Alert suppression](./Modules/Module-6-Azure-Defender.md#exercise-2-alert-suppression)
 - [Accessing Security Alerts using Graph Security API](./Modules/Module-6-Azure-Defender.md#exercise-3-accessing-security-alerts-using-graph-security-api)
 
-[**Module 7 – Exporting Microsoft Defender for Cloud information to a SIEM (L200)**](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
-- [Using continuous export](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md#exercise-1-using-continuous-export)
-- [Integration with Microsoft Sentinel](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md#exercise-2-integration-with-azure-sentinel)
-
 [**Module 8 – Enhanced Security (L300)**](./Modules/Module-8-Advance-Cloud-Defense.md)
 - [Using JIT to reduce attack surface](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-1-using-jit-to-reduce-attack-surface)
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
@@ -69,7 +68,7 @@ See this README for full description of the prerequisites: [**Prerequisites for 
 - [Download vulnerable image from docker hub](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
 - [Investigate the recommendation for vulnerabilities](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
 
-[**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
+
 
 
 

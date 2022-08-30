@@ -19,6 +19,8 @@ Module 1 represents the prerequesites. the whole module must be completed!
 - Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
 - Step 2: Provision the resources in this lab
 - Step 3: Enable Microsoft Defender for Cloud
+<br>
+- Step 4: Bring your computer to the workshop on the workshop day, and remember your username and password so you have access to the lab.
 
 
 ### Objectives
@@ -152,6 +154,8 @@ When the deployment is complete, you should see the following:
 
 ![Environment settings](./Defender4Cloud/Images/mdfc-workspaceenvsettings.png?raw=true)
 
+5. Click on Data collection and make sure "Alle Events" are collected.
+![Data Collection](../Images/mdfc-loganalyticsEvents.png)
 
 #### Configure the data collection settings in Microsoft Defender for Cloud
 

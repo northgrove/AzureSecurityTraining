@@ -124,6 +124,9 @@ When the deployment is complete, you should see the following:
 
 ![Environment settings](../Images/mdfc-workspaceenvsettings.png?raw=true)
 
+5. Click on Data collection and make sure "Alle Events" are collected.
+![Data Collection](../Images/mdfc-loganalyticsEvents.png)
+
 
 #### Configure the data collection settings in Microsoft Defender for Cloud
 
