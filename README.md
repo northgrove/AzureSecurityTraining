@@ -15,8 +15,13 @@ Day 2: Microsoft Sentinel
 
 To get full use of these days you need to come prepared! That means that you must have prepared the lab environment in forhand. Which means that you **must** deploy this lab to a new subscription **before** you meet up for the workshop.
 
+
+
 Module 1 represents the prerequesites. the whole module must be completed!
 - Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
+
+> NB! if you are using a free azure subscription, dont provision the lab so early that you have used all your free credits befor the workshop starts.
+
 - Step 2: Provision the resources in this lab
 - Step 3: Enable Microsoft Defender for Cloud
 - Step 4: Enable Microsoft Sentinel
@@ -217,6 +222,6 @@ Enabling this preview feature, bi-directional alert synchronization, will automa
 <br>
 <br>
 
-## Confirmation
-To confirm you have successfully deployd the lab and are ready for the workshop, please send an email to: 
+## Confirmation - HackCon 2022
+To confirm you have successfully deployd the lab and are ready for the workshop, please send an email to both kjetil.nordlund@microsoft.com and kent.husvik@microsoft.com. See you there!
 
