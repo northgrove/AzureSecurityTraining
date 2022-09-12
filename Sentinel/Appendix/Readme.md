@@ -20,3 +20,21 @@ https://github.com/reprise99/Sentinel-Queries
 
 https://github.com/reprise99/awesome-kql-sentinel
 
+## LinkedIN
+https://www.linkedin.com/groups/8768381/
+
+## Sentinel Blogs
+https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/bg-p/MicrosoftSentinelBlog
+
+# Twitter 
+https://twitter.com/reprise_99
+
+https://twitter.com/rodtrent
+
+https://twitter.com/_sarahyo
+
+https://twitter.com/MarkSimos
+
+https://twitter.com/Cyb3rWard0g
+
+https://twitter.com/msftsecurity
