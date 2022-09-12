@@ -1,5 +1,9 @@
 # Training Resources
 
+<p align="center">
+<img src="../Images/sentinel-labs-logo.png?raw=true">
+</p>
+
 ## Become a Microsoft Sentinel Ninja: The complete level 400 training
 https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/become-a-microsoft-sentinel-ninja-the-complete-level-400/ba-p/1246310
 
