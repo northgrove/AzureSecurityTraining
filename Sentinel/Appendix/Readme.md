@@ -15,7 +15,7 @@ https://github.com/rod-trent/MustLearnKQL
 ## SimuLand is an open-source initiative by Microsoft to help security researchers around the world deploy lab.
 https://github.com/Azure/SimuLand
 
-## DART forensics & incident response - Tons of Stuff.
+## DART forensics & incident response - Tons of Stuff from Matt Zorich.
 https://github.com/reprise99/Sentinel-Queries
 
 https://github.com/reprise99/awesome-kql-sentinel
