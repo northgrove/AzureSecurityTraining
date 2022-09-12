@@ -17,5 +17,6 @@ https://github.com/Azure/SimuLand
 
 ## DART forensics & incident response - Tons of Stuff.
 https://github.com/reprise99/Sentinel-Queries
+
 https://github.com/reprise99/awesome-kql-sentinel
 
