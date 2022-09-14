@@ -223,5 +223,5 @@ Enabling this preview feature, bi-directional alert synchronization, will automa
 <br>
 
 ## Confirmation - HackCon 2022
-To confirm you have successfully deployed the lab and are ready for the workshop, please send an email to both kjetil.nordlund@microsoft.com and kent.husvik@microsoft.com. See you there!
+To confirm you have successfully deployed the lab and are ready for the workshop, please send an email to both kjetil.nordlund@microsoft.com and kehusvik@microsoft.com. See you there!
 
