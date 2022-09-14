@@ -110,7 +110,7 @@ This exercise shows you how to enable the Threat Intelligence - TAXII data conne
 
 10. Click on Log4jIndicatorProcessor, Click on Edit, Click on the step Connections, Click on Add New, Sign in with your credentials. Finish up with saving the logic app.
 
-11. Repete the steps for BatchImportToSentinel. 
+11. Repete the steps for BatchImportToSentinel. Click on Edit, Click on the step Submit Multiple indicators, Click on Add New, Sign in with your credentials. Finish up with saving the logic app.
 
 
 **Congratulations, you have completed Module 2!**. You can now continue to **[Module 3 - Analytics Rules](./Module-3-Analytics-Rules.md)**
