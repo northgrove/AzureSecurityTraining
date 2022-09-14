@@ -72,7 +72,8 @@ This exercise shows you how to enable the Microsoft Defender for Cloud data conn
 
 5. Click on *Next Steps* at the top of the page and explore what content is available for this connector.
 
-### Exercise 3: Enable Threat Intelligence TAXII data connector
+### - Anomaly Removed the free Feeds - Exercise 3: Enable Threat Intelligence TAXII data connector - You will not able to finish this exercise.
+As workaround we Install Log4j Vulnerability Detection from Content Hub. (Step 6)
 
 This exercise shows you how to enable the Threat Intelligence - TAXII data connector. This connector allows you to send threat indicators from TAXII servers to Microsoft Sentinel. Threat indicators can include IP addresses, domains, URLs, and file hashes.
 
@@ -97,5 +98,12 @@ This exercise shows you how to enable the Threat Intelligence - TAXII data conne
 4. Click *Add* and wait until the operation completes.
 
 5. Click on *Next Steps* at the top of the page and explore what content is available for this connector. In a few seconds, the ThreatIntelligenceIndicator will be populated with IOCs from Anomali's feed.
+
+6. Click on Content Hub
+
+7. In the Search filed type Log4J
+![Log4J](../Images/Log4j.jpeg)
+
+8. Follow the steps to install Log4j Vulnerability Detection.
 
 **Congratulations, you have completed Module 2!**. You can now continue to **[Module 3 - Analytics Rules](./Module-3-Analytics-Rules.md)**
