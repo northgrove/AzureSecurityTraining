@@ -106,4 +106,11 @@ This exercise shows you how to enable the Threat Intelligence - TAXII data conne
 
 8. Follow the steps to install Log4j Vulnerability Detection.
 
+9. Click on Automation
+
+10. Click on Log4jIndicatorProcessor, Click on Edit, Click on the step Connections, Click on Add New, Sign in with your credentials. Finish up with saving the logic app.
+
+11. Repete the steps for BatchImportToSentinel. 
+
+
 **Congratulations, you have completed Module 2!**. You can now continue to **[Module 3 - Analytics Rules](./Module-3-Analytics-Rules.md)**
