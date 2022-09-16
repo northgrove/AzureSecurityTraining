@@ -37,7 +37,7 @@ Note: This is the default policy for Microsoft Defender for Cloud recommendation
 ### Exercise 2: Explore Azure Policy
 1.	On Azure Portal, navigate to **Azure Policy blade**. You can use the search box on the upper part for Policy or navigate to: https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyMenuBlade
 2.	From the left navigation pane, under the **Authoring** section, click on **Definitions** to explore the built-in policy definitions and initiatives.
-3.	From the top menu, use the filter button and set Category as **Microsoft Defender for Cloud** and Definitions Type as Initiative
+3.	From the top menu, use the filter button and set Category as **Microsoft Defender for Cloud** or **Security Center** and Definitions Type as Initiative
 4.	You can now see two built-in initiatives used by Microsoft Defender for Cloud.
 ![Modifying Microsoft Defender for Cloud default policy assignment](../Images/lab3pl2.gif?raw=true)
 5.	Notice the number of policies included in each initiative (policies column)
@@ -47,7 +47,7 @@ Note: This is the default policy for Microsoft Defender for Cloud recommendation
     - ASC DataProtection 
     - ASC OpenSourceRelationalDatabasesProtection
     - ASC Default 
-7.	Click on **ASC Default** to edit assignment details
+7.	Click on **ASC Default** > **Edit assignment** to edit assignment details
 8.	As you can see, this is the same assignment page as presented in the previous section. Now exit.
 
 ### Exercise 3: Create resource exemption for a recommendation
@@ -91,7 +91,7 @@ Note: Exemptions is a premium Azure policy capability that's offered for Microso
 ### Exercise 4: Create a policy enforcement and deny
 
 1.	From **Microsoft Defender for Cloud sidebar**, select **Recommendations**.
-2.	On recommendations filters, set the **Response action** as **Deny**.
+2.	search for **secure transfer to storage accounts should be enabled**
 
 ![Auditing on SQL server should be enabled](../Images/asc-recommendations-filters-deny.gif?raw=true)
 
@@ -106,7 +106,7 @@ Note: Exemptions is a premium Azure policy capability that's offered for Microso
 
 ![Prevent resource creation](../Images/asc-storage-deny-policy.gif?raw=true)
 
-6.	Go back to the **recommendations view**, and remove the Deny-only filter. From the search area, type **Auditing**. Click on the recommendation **Auditing on SQL server should be enabled**.
+6.	Go back to the **recommendations view**. From the search area, type **Auditing**. Click on the recommendation **Auditing on SQL server should be enabled**.
 
 ![Auditing on SQL server should be enabled](../Images/asc-auditing-sql.gif?raw=true)
 
@@ -143,8 +143,7 @@ Select **Review + create** to assign the policy on your subscription.
 5.	On Policies tab, select **Add policy definitions**.
 6.	The Add policy definition(s) pane opens: <br>
 Add each policy one by one:
-    - *Managed identity should be used in your Function App*
-    - *Custom subscription owner roles should not exist*
+    - *Function apps should use managed identity*
     - *Public network access on Azure SQL Database should be disabled*
     - *Storage accounts should restrict network access*
 

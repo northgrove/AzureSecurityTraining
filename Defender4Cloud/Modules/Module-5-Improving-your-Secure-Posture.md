@@ -10,7 +10,7 @@ This exercise guides you how to use the vulnerability assessment for virtual mac
 
 ### Exercise 1: Vulnerability assessment for VMs
 
-With Microsoft Defender for Cloud for servers, you can quickly deploy the integrated vulnerability assessment solution (powered by Qualys) with no additional configuration or extra costs. Once the vulnerability assessment scanner is deployed, it continually assesses all the installed applications on a virtual machine to find vulnerabilities and presents its findings in the Microsoft Defender for Cloud console. When a machine is found that doesn't have *vulnerability* assessment solution deployed, Microsoft Defender for Cloud generates a recommendation: *A vulnerability assessment solution should be enabled on your virtual machines*. To remediate a resource, you can click on the Quick Fix button to deploy the necessary VM extension.
+With Microsoft Defender for Cloud for servers, you can quickly deploy the integrated vulnerability assessment solution (as part of Defender for Endpoint or by Qualys) with no additional configuration or extra costs. Once the vulnerability assessment scanner is enabled or deployed, it continually assesses all the installed applications on a virtual machine to find vulnerabilities and presents its findings in the Microsoft Defender for Cloud console. When a machine is found that doesn't have *vulnerability* assessment solution deployed, Microsoft Defender for Cloud generates a recommendation: *A vulnerability assessment solution should be enabled on your virtual machines*. To remediate a resource, you can click on the Quick Fix button to deploy the necessary VM extension.
 
 **Explore vulnerability assessment recommendations:**
 
@@ -26,16 +26,11 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 
 > Note: You can find a list of supported operating systems [here](https://docs.microsoft.com/en-us/azure/security-center/deploy-vulnerability-assessment-vm#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines).
 
-10.	Ensure the VM extension is deployed on the relevant machines:
-    - From Azure Portal, open **Virtual Machines**.
-    - Select **asclab-win**.
-    - From the sidebar, click on **Extensions**.
-    - Make sure to have `WindowsAgent.AzureSecurityCenter` extension installed and successfully provisioned.
-    - Repeat the process for **asclab-linux** – you should expect to see a different name for the extension on Linux platform: LinuxAgent.AzureSecurityCenter.
+
 
 > Note: There are multiple ways you can automate the process where you need to achieve at scale deployment. More details are available on our [documentation](https://docs.microsoft.com/en-us/azure/security-center/deploy-vulnerability-assessment-vm#automate-at-scale-deployments) and on [blog](https://techcommunity.microsoft.com/t5/azure-security-center/built-in-vulnerability-assessment-for-vms-in-azure-security/ba-p/1577947).
 
-11.	The VA agent will now collect all required artifacts, send them to Qualys Cloud and findings will be presented back on ASC console within 24 hours.
+
 
 **View and remediate vulnerability assessment findings:**
 
@@ -77,7 +72,7 @@ az acr build --image sample/hello-world:v1 --registry <your container registry n
 5. Wait for a successful execution message to appear. For example: Run ID: cb1 was successful after 23s
 6.	The scan completes typically within few minutes, but it might take up to 15 minutes for the vulnerabilities/security findings to appear on the recommendation.
 7.	From Microsoft Defender for Cloud sidebar, click on **Recommendations**.
-8.	Expend **Remediate vulnerabilities** security control and select **Vulnerabilities in Azure Container Registry images should be remediated (powered by Qualys)**.
+8.	Expend **Remediate vulnerabilities** security control and select **Container registry images should have vulnerability findings resolved**.
 9.	On the recommendation page, notice the following details at the upper section:
     - Unhealthy registries: *1/1*
     - Severity of recommendation: *High*
