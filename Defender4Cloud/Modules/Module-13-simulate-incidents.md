@@ -1,9 +1,9 @@
-# Module 13 - Trigger som security incidents
+# Module 13 - Trigger some security incidents
 
 <p align="left"><img src="../Images/asc-labs-intermediate.gif?raw=true"></p>
 
 #### 🎓 Level: 200 (Intermediate)
-#### ⌛ Estimated time to complete this lab: 20 minutes
+#### ⌛ Estimated time to complete this lab: 30 minutes
 
 
 ## Anonymous access to Azure resources
@@ -17,9 +17,7 @@ TOR Browser download: [Download TOR Browser](https://www.torproject.org/download
 
 1. start the TOR browser and access https://portal.azure.com
 2. Log in to your lab environment
-3. navigate to your Azure Subscription
-4. navigate to your lab resource group
-5. browse some of the different resources. I.e Key Vault, Storage Accounts
+
 
 ### Access a storage account content with TOR Browser
 Creating Access Policy an URL for Storage account content:
@@ -37,6 +35,12 @@ Access the content from TOR Browser
 1. Start the TOR browser
 2. Paste the **Blob SAS URL** in the addressbar
    
+### Accessing a key vault with TOR Browser
+1. In the Azure Portal browse for **Key vaults**
+2. Locate the key vault part of the lab: **asclab-kv-xxxxx**
+3. Browse the key vault and navigate to **Secrets** in the sidebar
+4. 
+
 
 
 ## Simulate alerts on a Windows VM
@@ -63,14 +67,30 @@ If the command is successful, you'll see a new alert on the workload protection 
 
 
 
-## Simulate alert for Azure Kubernetes Service
+## Simulate AKS alert on Microsoft Defender for Cloud
+To simulate AKS alert on a cluster that is protected under Microsoft Defender for Cloud follow the following steps: 
+1. From [**Azure Cloud shell**](https://shell.azure.com) login to the AKS subscription by running these commands
+```
+az login 
+az account set --subscription "MyAzureSubID"
+```
+2. Authenticate to the AKS cluster
+```
+az aks get-credentials --resource-group <your resource group name> --name asclab-aks 
+```
+3. Run the alert simulation command below
+```
+kubectl get pods --namespace=asc-alerttest-662jfi039n
+```
+4. Look for a AKS related alert in Defender for Cloud
+> Defender for Cloud test alert for Kubernetes (not a threat)
+
+For more details, see first section in this article: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-to-demonstrate-the-new-containers-features-in-microsoft/ba-p/3281172
 
 
 
 
-
-
-## More advanced scenarios
+## More scenarios
 More advanced scenarios for simulating attack can be found here:
 https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Simulations
 
