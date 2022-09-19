@@ -62,6 +62,12 @@ To be done on the Workshop day:
 
 
 [**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
+- [Anonymous Access to Azure Resources](./Modules/Module-13-simulate-incidents.md#anonymous-access-to-azure-resources)
+- [Simulate alerts on a Windows VM](/Modules/Module-13-simulate-incidents.md#simulate-alerts-on-a-windows-vm)
+- [Simulate AKS alert on Microsoft Defender for Cloud](./Modules/Module-13-simulate-incidents.md#simulate-aks-alert-on-microsoft-defender-for-cloud)
+
+[**Extra: Module 7 - Exporting Defender for Cloud content to Microsoft Sentinel**](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
+
 
 
 
