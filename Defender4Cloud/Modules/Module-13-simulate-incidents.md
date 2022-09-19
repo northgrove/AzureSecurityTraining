@@ -39,8 +39,23 @@ Access the content from TOR Browser
    
 
 
-## Simulate Eicar alert on a Windows VM
+## Simulate alerts on a Windows VM
 
+### Simulate suspicious powershell command
+1. Login to the target computer, asclab-win
+    - Login information can be reset using the "reset password" functionality on the VM in the Azure portal.
+2. Create a folder 'c:\test-MDATP-test'
+3. Open a command-line window
+4. At the prompt, copy and run the following command. The command prompt window will close automatically.
+   ```
+   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden (New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe'); Start-Process 'C:\\test-MDATP-test\\invoice.exe'
+   ```
+If the command is successful, you'll see a new alert on the workload protection dashboard and in the Microsoft Defender for Endpoint portal. This alert might take a few minutes to appear.
+5. To review the alert in Defender for Cloud, go to **Security alerts > Suspicious Powershell commandline**
+
+
+
+### Download Eicar
 1. Login to the target computer, asclab-win
     - Login information can be reset using the "reset password" functionality on the VM in the Azure portal.
 2. browse to: https://www.eicar.org/download-anti-malware-testfile/
@@ -48,6 +63,7 @@ Access the content from TOR Browser
 
 
 
+## Simulate alert for Azure Kubernetes Service
 
 
 

@@ -10,7 +10,7 @@ This exercise guides you how
 
 ### Exercise 1: Alert validation
 
-Here let’s cover the new Alert Simulation, which should be out in the first week of December
+Here let’s cover the new Alert Simulation
 
 1.	1.	Go to Microsoft Defender for Cloud, and click the Security Alerts in the sidebar.
 2.	Create an alert simulation for VM:
@@ -90,4 +90,6 @@ Microsoft Defender for Cloud will:
 3.	Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Microsoft Defender for Cloud.
 Onboarding might take up to 24 hours.
 
-### Continue with the next lab: [Module 7 - Exporting Microsoft Defender for Cloud information to a SIEM](../Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
+> More information about the integration between Defender for Cloud and Defender for Endpoints: [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](https://learn.microsoft.com/nb-no/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
+
+### Continue with the next lab: [Module 8 – Advance Cloud Defense](Module-8-Advance-Cloud-Defense.md)

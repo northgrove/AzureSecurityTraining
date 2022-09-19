@@ -25,10 +25,7 @@ See this README for full description of the prerequisites: [**Prerequisites for 
 
 [**Module 1 – Prerequisites - Preparing the Environment (L100)**](../README.md)
 
-
 To be done on the Workshop day:
-[**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
-
 [**Module 2 – Exploring Microsoft Defender for Cloud (L100)**](./Modules/Module-2-Exploring-Azure-Security-Center.md)
 - [Understanding Microsoft Defender for Cloud dashboard](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-1-understanding-azure-security-center-dashboard)
 - [Exploring Secure Score and Recommendations](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-2-exploring-secure-score-and-recommendations)
@@ -63,12 +60,8 @@ To be done on the Workshop day:
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
 - [File Integrity Monitoring](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-3-file-integrity-monitoring)
 
-[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
-- [Install Docker Desktop](./Modules/Module-9-Defender-For-Containers.md#exercise-1-install-docker-desktop)
-- [Download vulnerable image from docker hub](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
-- [Investigate the recommendation for vulnerabilities](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
 
-
+[**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
 
 
 
