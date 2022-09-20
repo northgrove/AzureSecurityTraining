@@ -1,4 +1,4 @@
-# Microsoft Sentinel Content Hub
+# Module 8 - Microsoft Sentinel Content Hub
 
 #### 🎓 Level: 100 (Beginner)
 #### ⌛ Estimated time to complete this lab: 20 minutes
