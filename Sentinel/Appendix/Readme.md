@@ -32,6 +32,8 @@ https://learn.microsoft.com/en-us/Azure/sentinel/threat-intelligence-integration
 
 https://systemweakness.com/threat-intelligence-on-sentinel-anomali-ibm-x-force-cc93ad55eac1
 
+https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/ingesting-alien-vault-otx-threat-indicators-into-azure-sentinel/ba-p/1086566
+
 # Twitter 
 https://twitter.com/reprise_99
 
