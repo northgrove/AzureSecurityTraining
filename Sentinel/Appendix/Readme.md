@@ -26,6 +26,12 @@ https://www.linkedin.com/groups/8768381/
 ## Sentinel Blogs
 https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/bg-p/MicrosoftSentinelBlog
 
+## Threat intelligence
+
+https://learn.microsoft.com/en-us/Azure/sentinel/threat-intelligence-integration
+
+https://systemweakness.com/threat-intelligence-on-sentinel-anomali-ibm-x-force-cc93ad55eac1
+
 # Twitter 
 https://twitter.com/reprise_99
 
