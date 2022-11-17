@@ -222,8 +222,7 @@ Enabling this preview feature, bi-directional alert synchronization, will automa
 <br>
 <br>
 
-## Confirmation - HackCon 2022
-To confirm you have successfully deployed the lab and are ready for the workshop, please send an email to both kjetil.nordlund@microsoft.com and kehusvik@microsoft.com. See you there!
+
 
 ## Cleanup after the lab exercise is done
 To delete all lab resources deployd with the deployment script in this lab, it should be enough to delete the resource group created.
