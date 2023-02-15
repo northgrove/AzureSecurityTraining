@@ -60,14 +60,50 @@ To be done on the Workshop day:<br>
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
 - [File Integrity Monitoring](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-3-file-integrity-monitoring)
 
+[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
+- [Install Docker Desktop](./Modules/Module-1-Preparing-the-Environment.md)
+- [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
+- [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
 
-[**Module 13 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
+[**Module 13 – Governance (L300)**](./Modules/Module-13-Governance.md)
+- [Add a new Governance Rule in Microsoft Defender for Cloud](./Modules/Module-13-Governance.md#exercise-1-add-a-new-governance-rule-in-microsoft-defender-for-cloud)
+- [See recommendations that you're the owner of](./Modules/Module-13-Governance.md#exercise-2-see-recommendations-that-youre-the-owner-of)
+
+[**Module 15 – Integrating Defender for DevOps with GitHub Advanced Security (L200)**](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md)
+- [Preparing the environment](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-1-preparing-the-environment)
+- [Creating an GitHub Trial account](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-2-creating-an-github-trial-account)
+- [Obtain trial of GitHub Enterprise Cloud account](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-3-obtain-trial-of-github-enterprise-cloud-account)
+- [Connecting your GitHub organization](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-4-connecting-your-github-organization)
+- [Configure the Microsoft Security DevOps GitHub action](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-5-configure-the-microsoft-security-devops-github-action)
+
+
+[**Module 99 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
 - [Anonymous Access to Azure Resources](./Modules/Module-13-simulate-incidents.md#anonymous-access-to-azure-resources)
 - [Simulate alerts on a Windows VM](/Modules/Module-13-simulate-incidents.md#simulate-alerts-on-a-windows-vm)
 - [Simulate AKS alert on Microsoft Defender for Cloud](./Modules/Module-13-simulate-incidents.md#simulate-aks-alert-on-microsoft-defender-for-cloud)
 
-[**Extra: Module 7 - Exporting Defender for Cloud content to Microsoft Sentinel**](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
 
+## Extras
+
+[**Extra: Module 17 - Defender CSPM (L200)**](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md)
+- [Exercise 1: Preparing the Environment for DCSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-1-preparing-the-environment-for-dcspm-plan)
+- [Exercise 2: Enabling Defender CSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-2-enabling-defender-cspm-plan)
+- [Exercise 3: Explore Attack Paths in your Environment](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
+- [Exercise 4: Build query with Cloud Security Explorer](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
+- [Exercise 5: Assign Governance Rule](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
+
+[**Extra: Module 16 - Protecting On-Prem Servers in Defender for Cloud (L300)**](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
+- [Install Hyper-V which will be used to create the server on your own machine](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-1-install-hyper-v-which-will-be-used-to-create-the-server-on-your-own-machine)
+- [Using Hyper-V, confirm that there's a virtual switch already installed on your desktop](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-2-using-hyper-v-confirm-that-theres-a-virtual-switch-already-installed-on-your-desktop)
+- [Using Hyper-V, create a VM (virtual machine) which will act as the virtual on-premises server that you will be protecting via Defender for DevOps](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-3-using-hyper-v-create-a-vm-virtual-machine-which-will-act-as-the-virtual-on-premises-server-that-you-will-be-protecting-via-defender-for-devops)
+- [Install the operating system in your VM](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-4-install-the-operating-system-in-your-vm)
+- [Setup the Azure Arc Rresource provider](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-5-setup-the-azure-arc-rp)
+- [Connect to your VM](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-6-connect-to-your-vm)
+- [Install Azure Arc on the VM so the VM will be protected by Micrsosoft Defender for Cloud](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-7-install-azure-arc-on-the-vm-so-the-vm-will-be-protected-by-micrsosoft-defender-for-cloud)
+- [Confirm that the "on-prem" server we created is being detected by the Azure portal](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-8-confirm-that-the-on-prem-server-we-created-is-being-detected-by-the-azure-portal)
+
+
+[**Extra: Module 7 - Exporting Defender for Cloud content to Microsoft Sentinel**](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
 
 
 
