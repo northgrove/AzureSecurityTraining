@@ -10,6 +10,14 @@ Module 5: vulnerabilities
     - Repeat the process for **asclab-linux** – you should expect to see a different name for the extension on Linux platform: LinuxAgent.AzureSecurityCenter.
 
 
+Module 1:
+1.  On the **Information Protection** tile, you can see a list of your resources which have data which has been classified through [Azure Purview](https://azure.microsoft.com/en-us/services/purview/). 
+
+
+14.	From the filter pane, select **Workload Protection** and value **On**. On the **Resource Group** select **asclab**. From the top menu bar, click on **Download CSV report**. You will get a snapshot to work on it offline already filtered. You can also right click on any of the resource and upgrade to Workload Protections plan (when applicable).
+15.	From the top menu, click on **open query**. This will open up the resource graph explorer blade, click on **Run Query**. You should now have the same list of resources and columns like in the previous step. This query can be editable for your needs and here it gets very powerful.
+16.	Save the query for later use by clicking on **Save as** from the top menu. You can use it to create periodic reports. Name the report as *asc-filtered-query* and select **save**.
+
 
 
 

@@ -21,7 +21,7 @@ You can add additional industry standards (represented as compliance packages) s
 1.	From the top menu bar in Regulatory Compliance, select **Manage compliance policies**.
 2.	Select a scope to assign the new package: **Azure subscription 1**.
 3.	Select **Security policy** from the sidebar. On the **Industry & regulatory standards** section, notice the out of the box standards. Click on **Add more standards**.
-4.	On the **Add regulatory compliance standards**, locate the **Azure CIS 1.1.0 (New)** standard and select **Add**.
+4.	On the **Add regulatory compliance standards**, locate the **Azure CIS 1.3.0** standard and select **Add**.
 ![Regulatory compliance assessment and standards](../Images/lab4rc4.gif?raw=true)
 5.	Click **Assign the Policy**. For scope, select azure subscription 1, and leave all other options as default.
 
@@ -31,7 +31,7 @@ You can add additional industry standards (represented as compliance packages) s
 > ❗ Important: <br>
 > It will take a while until the change takes an effect (2-3 hours).
 
-7.	**Azure CIS 1.1.0 (New)** should now be listed on the standards list.
+7.	**Azure CIS 1.3.0** should now be listed on the standards list.
    
 ### Exercise 3: Exploring a benchmark 
 1.	From the top menu bar in Regulatory Compliance, select **Manage compliance policies** which can be found under the Lowest compliance regulatory standards tile.
@@ -94,7 +94,7 @@ Navigate to Azure Policy blade. You can also select this [link](https://portal.a
 22.	Follow the **on-screen instructions to assign it on the desired scope**. If you decided to include parameters in your initiative, now you should be able to fulfill them. Click **Review + create** to start the validation process and then **Create**.
 23.	Now your new security benchmark is displayed in regulatory compliance along with the built-in regulatory standards.
 
-### Exercise 4 Azure Audit Reports
+### Exercise 5: Azure Audit Reports
 
 Now in Microsoft Defender for Cloud, you can easily create & download Audit reports for Regulatory Compliance Standards.
 1.	From Microsoft Defender for Cloud, select Regulatory Compliance from the sidebar
@@ -106,7 +106,7 @@ Now in Microsoft Defender for Cloud, you can easily create & download Audit repo
 You now have the audit report downloaded.
 
 
-### Exercise 5 Continuous Export & Compliance over time workbook
+### Exercise 6: Continuous Export & Compliance over time workbook
 
 Compliance dashboard over time is a Workbook in Microsoft Defender for Cloud dedicated to tracking a subscription's compliance with the regulatory or industry standards applied to it.
 

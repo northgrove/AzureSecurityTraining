@@ -43,7 +43,7 @@ In this lab we will use only one but selecting different/additional subscription
 > ⭐ Good to know: <br>
 > This page shows a list of subscriptions and their coverage type. You can use this page to find subscriptions that are not covered by Microsoft Defender for Cloud and help you identify “shadow IT” subscriptions.
 
-10.	Go back to the **Overview** page, and look at the **Secure Score** tile, you can see your current score along with the number of completed controls and recommendations. Clicking on this tile will redirects you to drill down view across subscriptions.
+10.	Go back to the **Overview** page, and look at the **Secure Posture** tile, you can see your current score along with the number of completed controls and recommendations. Clicking on this tile will redirects you to drill down view across subscriptions.
 
 ![Overview: Secure Score tile](../Images/asc-overview-secure-score-tile.gif?raw=true)
 
@@ -55,7 +55,6 @@ In this lab we will use only one but selecting different/additional subscription
 13.	On the **Firewall Manager** tile, you are provided with unified infrastructure and network security management. Azure Firewall Manager is a security management service that provides central security policy and route management for cloud-based security perimeters.
 14. On the **Inventory** tile, you are provided with a view of your security posture across all your inventory, including Defender coverage per resource and whether the monitoring agent is installed (which brinhs security protection to those resources).
 ![Overview: Secure Score tile](../Images/mdfc-inventory.png?raw=true)  
-1.  On the **Information Protection** tile, you can see a list of your resources which have data which has been classified through [Azure Purview](https://azure.microsoft.com/en-us/services/purview/). 
 ![Overview: Secure Score tile](../Images/mdfc-infpro.png?raw=true)  
 
 16.	On the right pane, you can find the **Insights** section which offers tailored items for your environments: 
@@ -69,13 +68,13 @@ In this lab we will use only one but selecting different/additional subscription
 
 ### Exercise 2: Exploring Secure Score and Recommendations
 
-**Exploring Secure Score**
+**Exploring Security Posture**
 
-Previously, we briefly explored the Secure Score tile on the overview page. Now let’s dive into this capability and the associated recommendations. Microsoft Defender for Cloud continually assesses your resources. All findings are aggregated into a single score (Secure Score) which measures your current security posture of your subscription/s; the higher the score, the lower the identified risk level.
+Previously, we briefly explored the Security Posture tile on the overview page. Now let’s dive into this capability and the associated recommendations. Microsoft Defender for Cloud continually assesses your resources. All findings are aggregated into a single score (Secure Score) which measures your current security posture of your subscription/s; the higher the score, the lower the identified risk level.
 Exploring secure score
 
 1.	Go to the **Microsoft Defender for Cloud Overview blade**.
-2.	From the left navigation pane, under the **Cloud Security** section, press on the **Secure Score** button.
+2.	From the left navigation pane, under the **Cloud Security** section, press on the **Security Posture** button.
 3.	On the Secure Score page, **review your current overall secure score**.
 
 > ⭐ Notice: <br>
@@ -100,9 +99,9 @@ Exploring secure score
 > -	To get the max score, fix all recommendations for all resources in a control.
 > To understand how the score and the downstream recommendations are calculated, please visit our official [documentation](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#calculations---understanding-your-score "Understanding your score calculation").
 
-4.	On the right side, **switch the toggle button to OFF** to disable the group by controls view – now you should get a flat view of all recommendations. **Switch it back to ON**.
+4.	On top select "All recommendations" to disable the group by controls view – now you should get a flat view of all recommendations. **Switch back to Secure Score Recommendations**.
 
-![Recommendations group by controls](../Images/asc-recommendations-group-by-controls.gif?raw=true)
+![Recommendations group by controls](../Images/AllRecommendations.gif?raw=true)
 
 5.	Look for the **Encrypt data in transit** security control. Notice its max score 4 and the potential increase for the score. You should have three recommendations within this control.
 6.	Click on the **Secure transfer to storage accounts should be enabled** recommendation. As you can see, this recommendation has the **Quick Fix** avaialble.
@@ -172,7 +171,7 @@ Asset inventory dashboard allows you to get a single pane of glass view to all y
 11.	From the filter menu, select **Recommendations**, uncheck **select all** option and then select the **Auditing on SQL Server should be enabled**. You can also use the search area within the filter to better find across the list. Clear your filter.
 12.	Tag is very common asset management in Azure to do asset management. Using this view, you can assign tags to the filtered resources:
 
-* Filter the **Resource type** column to include only **App Services**.
+* Filter the **Resource type** column to include only **"Web apps" and "Function apps"**.
 * **Select** the two app service named as *asclab-fa-xx* and *asclab-app-xx*
 * From the top menu, click **Assign tags**
 * Assign `Environment` as the name and  `Production` as the value.
@@ -181,9 +180,7 @@ Asset inventory dashboard allows you to get a single pane of glass view to all y
 ![Inventory: Assign tags](../Images/asc-inventory-assign-tags.gif?raw=true)
 
 13.	Notice the **Security findings** filter – it allows you to find all resources that are vulnerable by a specific vulnerability. You can also search for CVE, KB ID, name and missing update.
-14.	From the filter pane, select **Workload Protection** and value **On**. On the **Resource Group** select **asclab**. From the top menu bar, click on **Download CSV report**. You will get a snapshot to work on it offline already filtered. You can also right click on any of the resource and upgrade to Workload Protections plan (when applicable).
-15.	From the top menu, click on **open query**. This will open up the resource graph explorer blade, click on **Run Query**. You should now have the same list of resources and columns like in the previous step. This query can be editable for your needs and here it gets very powerful.
-16.	Save the query for later use by clicking on **Save as** from the top menu. You can use it to create periodic reports. Name the report as *asc-filtered-query* and select **save**.
+
 
 > ⭐ Good to know: <br>
 > Inventory dashboard is fully built on top of Azure Resource Graph (ARG) which stores all of ASC security posture data and leveraging its powerful KQL engine.
