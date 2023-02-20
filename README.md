@@ -171,7 +171,7 @@ When the deployment is complete, you should see the following:
 
 
 2. On the **Settings & Monitoring** page, set **Log Analytics agent/Azure Monitor Agent** to **On** (if it's not already set to On)
-![Settings-Monitoring](./Defender4Cloud/Images/D4C-SettingsMonitoringPAge.png?raw=true)
+![Settings-Monitoring](./Defender4Cloud/Images/D4C-SettingsMonitoringPage.png?raw=true)
 3. Click **Edit configuration** under the configuration column.
 4. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
 5. Under **Store additional raw data - Windows security events** section, select **All Events** option.
