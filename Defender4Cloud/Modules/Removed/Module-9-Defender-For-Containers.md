@@ -40,9 +40,8 @@ Now you will use Docker to download a vulnerable image from it and push it into 
 ```
 az acr login --name NameOfServer
 ```
-In case you have not Azure CLI installed yet, please visit https://docs.microsoft.com/en-us/cli/azure/install-azure-cli for instructions. You will also need to login to your Azure subscription via the *az login* before running the command above.
-
 You might see an output like 
+
 
 ![ACR login](../Images/3acrlogin.png?raw=true)
 
@@ -64,27 +63,27 @@ docker pull vulnerables/web-dvwa
 ```
 ![Docker images](../Images/5dockerimages.png?raw=true)
 
-6. Create an alias of the image by runnig the following command (replace *secteach365* in following instructions with the name of your server that you copied above): 
+6. Check again the image on your local repository by running the command below (replacingasclabcr### with the name of your server that copied above): 
 ```
-docker tag vulnerables/web-dvwa secteach365.azurecr.io/vulnerables/web-dvwa
-```
-
-7. Check again the image on your local repository by running the command below: 
-```
-docker images secteach365.azurecr.io/vulnerables/web-dvwa
+Docker images asclabcr###.azurecr.io/vulnerables/web-dvwa
 ```
 ![Docker local repository](../Images/6dockerlocalrepo.png?raw=true)
 
 
-8. Run docker push to upload the new image to the azure repository and generate image scan (it can take some time), using the command below: <br />
+
+
+7. Run docker push to upload the new image to the azure repository and generate image scan (it can take some time), using the command below: <br />
 ```
-docker push secteach365.azurecr.io/vulnerables/web-dvwa
+docker push secteach365.azurecr.io/vulnerables/web-dvwa:v1
 ```
+
 
 ![Docker push](../Images/7dockerpush.png?raw=true)
 
-9. Then go to the Azure portal and find the Container registry you created.
-10. Go to Repositories in the Container Registry. Notice the vulnerable image is found in the ACR repository.
+
+
+8. Then go to the Azure portal and find the Container registry you created.
+9. Go to Repositories in the Container Registry. Notice the vulnerable image is found in the ACR repository.
 
 
 ![Image in ACR](../Images/8imageinacr.png?raw=true)
@@ -112,3 +111,4 @@ Once a vulnerable image has been pushed to the Azure Container Registry registry
  ![Debian](../Images/11debian.png?raw=true)
  
 
+### Continue with the next lab: [Module 13 – Governance](Module-13-Governance.md)

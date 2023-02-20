@@ -156,30 +156,39 @@ When the deployment is complete, you should see the following:
    
     ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings2.png?raw=true)
 
-4. Ensure that both plans for **Servers** and **SQL servers on machines** are turned **On**.
+4. Ensure that plans for **Servers** and **Databases** are turned **On**. To check for **SQL servers on machines**, in Databases, click on **Select types** and make sure **SQL servers on machines** is toggled **On**. **Azure SQL Databases** should be toggled **On** too. 
 
-![Environment settings](./Defender4Cloud/Images/mdfc-workspaceenvsettings.png?raw=true)
+![Environment settings](./Defender4Cloud/Images/module1_defenderCoverageStatus_dbSQL_yl.png?raw=true)
 
-5. Click on Data collection and make sure "Alle Events" are collected.
-![Data Collection](./Defender4Cloud/Images/mdfc-loganalyticsEvents.png)
 
 #### Configure the data collection settings in Microsoft Defender for Cloud
 
-1. Go back to the **Environment settings** in the sidebar and drill down into your **Azure subscription** (Azure subscription 1).
-2. Navigate to **Auto provisioning**
+1. On the **Defender plans** page, select **Settings & Monitoring** on the top menu.
 
-![Auto-provisioning](./Defender4Cloud/Images/mdfc-autoprovisioning.png?raw=true)
 
-5. On the **Auto provisioning - Extensions** page, set **Log Analytics agent for Azure VMs** to **On** (if it's not already set to On)
-6. Click **Edit configuration** under the configuration column.
-7. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
-8. Under **Store additional raw data - Windows security events** section, select **All Events** option.
+![Auto-provisioning](./Defender4Cloud/Images/D4C-SettingsMonitoring.png?raw=true)
+
+
+
+2. On the **Settings & Monitoring** page, set **Log Analytics agent/Azure Monitor Agent** to **On** (if it's not already set to On)
+![Settings-Monitoring](./Defender4Cloud/Images/D4C-SettingsMonitoringPAge.png?raw=true)
+3. Click **Edit configuration** under the configuration column.
+4. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
+5. Under **Store additional raw data - Windows security events** section, select **All Events** option.
 
 ![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/asc-extension-deployment-configuration.gif?raw=true)
 
-9. Select **Existing and new VMs** in the pop-up.
-10. Click on **Apply**.
-11. Click on **Save**.
+6. Select **Existing and new VMs** in the pop-up.
+7. Click on **Apply**.
+8. On the **Settings & Monitoring** page, make sure to also set the following to **On**:
+   1. Vulnerability assesment for machines - Click "Edit configuration" and choose "Microsoft Defender vulnerability management" as the vulnerability assesment solution.
+   2. Guest Configuration agent
+   3. **Endpoint protection**
+   4. Agentless scanning for machines
+   5. Defender DaemonSet
+   6. Azure Policy for Kubernetes
+9. Click "Continue" on the top
+10. Click on **Save** on the top, left for "Settings & Monitoring".
 
 <br>
 

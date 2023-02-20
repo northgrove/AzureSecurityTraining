@@ -54,3 +54,6 @@ Now all your high severity recommendations in Microsoft defender for Cloud will 
 2.  Click **Show my items only** which is found on the top left corner of the recommendations table.
 3. Select one of the recommendations that you own
 4. Remediate it.
+
+
+### Continue with the next lab: [Module 15 – Integrating Defender for DevOps with GitHub](Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md)
