@@ -145,32 +145,36 @@ When the deployment is complete, you should see the following:
    ![Install Agents](./Defender4Cloud/Images/mdfc-installagents.png?raw=true)
 
 #### Get the status of the Defender coverage on the subscription and the workspace
-1. Return to Microsoft Defender for Cloud blade and Click on **Environment settings**. Click the down arrow on **Azure** to show the subscription, and then click the down arrow on **Azure Susbcription 1** to show the workspace. Notice the Defender coverage is 11/11 plans for the subscription and 2/2 plans for the workspace, meaning that you are now fully protected using Microsoft Defender for Cloud.
+1. Return to Microsoft Defender for Cloud blade and Click on **Environment settings**. Click the down arrow on **Azure** to show the subscription, and then click the down arrow on **Azure Susbcription 1** to show the workspace. Notice the Defender coverage is 12/12 plans for the subscription and 2/2 plans for the workspace, meaning that you are now fully protected using Microsoft Defender for Cloud.
     ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings.png?raw=true)
 
 2. Click on **Azure subscription 1**, and notice how all Microsoft Defender for Cloud plans are enabled. 
+3. For Servers, make sure that **Plan 2** is selected as Plan / pricing.
+4. To check for **SQL servers on machines**, in Databases, click on **Select types** and make sure **SQL servers on machines** is toggled **On**. **Azure SQL Databases** should be toggled **On** too. 
+
+![Environment settings](./Defender4Cloud/Images/module1_defenderCoverageStatus_dbSQL_yl.png?raw=true)
 
 > If you need to enable individual plans, first ensure that the Microsoft Defender for Cloud plans blue box on the right hand side is selected, and then you can select the specific Defender plans underneath.
 
-3. Exit that screen, and then select the workspace from the previous screen. 
+5. Exit that screen, and then select the workspace from the previous screen. 
    
     ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings2.png?raw=true)
 
-4. Ensure that plans for **Servers** and **Databases** are turned **On**. To check for **SQL servers on machines**, in Databases, click on **Select types** and make sure **SQL servers on machines** is toggled **On**. **Azure SQL Databases** should be toggled **On** too. 
+6. Ensure that plans for **Servers** and **Databases** are turned **On**.
 
-![Environment settings](./Defender4Cloud/Images/module1_defenderCoverageStatus_dbSQL_yl.png?raw=true)
+
 
 
 #### Configure the data collection settings in Microsoft Defender for Cloud
 
-1. On the **Defender plans** page, select **Settings & Monitoring** on the top menu.
+1. On the **Defender plans** page page for **Azure Subscription 1**, select **Settings & Monitoring** on the top menu.
 
 
 ![Auto-provisioning](./Defender4Cloud/Images/D4C-SettingsMonitoring.png?raw=true)
 
 
 
-2. On the **Settings & Monitoring** page, set **Log Analytics agent/Azure Monitor Agent** to **On** (if it's not already set to On)
+2. On the **Settings & Monitoring**, set **Log Analytics agent/Azure Monitor Agent** to **On** (if it's not already set to On)
 ![Settings-Monitoring](./Defender4Cloud/Images/D4C-SettingsMonitoringPage.png?raw=true)
 3. Click **Edit configuration** under the configuration column.
 4. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
@@ -178,7 +182,7 @@ When the deployment is complete, you should see the following:
 
 ![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/D4C-AutoProvisioningConfiguration.png?raw=true)
 
-6. Select **Existing and new VMs** in the pop-up.
+6. If asked, select **Existing and new VMs** in the pop-up.
 7. Click on **Apply**.
 8. On the **Settings & Monitoring** page, make sure to also set the following to **On**:
    1. Vulnerability assesment for machines - Click "Edit configuration" and choose "Microsoft Defender vulnerability management" as the vulnerability assesment solution.
