@@ -145,7 +145,7 @@ Exploring secure score
 11. Wait for a notification: ✅ **Fix successful** - Successfully remediated the issues on the selected 
 resources. Note: It can take several minutes after remediation completes to see the resources in the 'healthy resources' tab.
 
-12.	Return to recommendations list. Expand the "Manage access and permissions" security control, you can now see **Preview recommendations** which have the flag symbol to the right, under **Insights**. Those with **Preview recommendations** aren’t included in the calculation of your score. They should be still remediated, so that when the preview period ends, they will contribute towards your score.
+12.	Return to recommendations list. Expand the "Manage access and permissions" security control, you can now see **Preview recommendations** which have the flag symbol to the right, under **Insights**. Those with **Preview recommendations** aren’t included in the calculation of your score. They should still be remediated, so that when the preview period ends, they will contribute towards your score.
 ![Remediate a resource](../Images/module2_recommendations_previewrecommendations_yl.png?raw=true)
 
 
