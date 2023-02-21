@@ -172,7 +172,7 @@ Asset inventory dashboard allows you to get a single pane of glass view to all y
 > Notice! The entire grid can be filtered and sorted
 
 10.	From the filter menu, select **Recommendations**, uncheck **select all** option and then select the **Auditing on SQL Server should be enabled**. You can also use the search area within the filter to better find across the list. Clear your filter.
-11.	Tag is very common asset management in Azure to do asset management. Using this view, you can assign tags to the filtered resources:
+11.	To assign Tags is very common in Azure for asset management. Using this view, you can assign tags to the filtered resources:
 
 * Filter the **Resource type** column to include only **"Web apps" and "Function apps"**.
 * **Select** the two app service named as *asclab-fa-xx* and *asclab-app-xx*
