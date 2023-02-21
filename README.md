@@ -176,7 +176,7 @@ When the deployment is complete, you should see the following:
 4. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
 5. Under **Store additional raw data - Windows security events** section, select **All Events** option.
 
-![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/asc-extension-deployment-configuration.gif?raw=true)
+![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/D4C-AutoProvisioningConfiguration.png?raw=true)
 
 6. Select **Existing and new VMs** in the pop-up.
 7. Click on **Apply**.
