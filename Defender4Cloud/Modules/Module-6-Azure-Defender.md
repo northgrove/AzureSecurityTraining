@@ -10,9 +10,9 @@ This exercise guides you how
 
 ### Exercise 1: Alert validation
 
-Here let’s cover the new Alert Simulation, which should be out in the first week of December
+Here let’s cover the new Alert Simulation.
 
-1.	1.	Go to Microsoft Defender for Cloud, and click the Security Alerts in the sidebar.
+1.	Go to Microsoft Defender for Cloud, and click the Security Alerts in the sidebar.
 2.	Create an alert simulation for VM:
     - On Security alerts page, click on **Sample alerts** button.
     - Select **Azure subscription 1**.
@@ -71,4 +71,4 @@ In the previous step, we used the dismiss option to manually dismiss a single al
 5.  You should now expect to see only **1 dismissed alert**: High volume of operations in a Key Vault Sample alert.
 
 
-### Continue with the next lab: [Module 7 - Exporting Microsoft Defender for Cloud information to a SIEM](../Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
+### Continue with the next lab: [Module 8 – Advance Cloud Defense](../Modules/Module-8-Advance-Cloud-Defense.md)
