@@ -10,7 +10,7 @@ This exercise guides you how to use the vulnerability assessment for virtual mac
 
 ### Exercise 1: Vulnerability assessment for VMs
 
-With Microsoft Defender for Cloud for servers, you can quickly deploy the integrated vulnerability assessment solution (powered by Qualys) with no additional configuration or extra costs. Once the vulnerability assessment scanner is deployed, it continually assesses all the installed applications on a virtual machine to find vulnerabilities and presents its findings in the Microsoft Defender for Cloud console. When a machine is found that doesn't have *vulnerability* assessment solution deployed, Microsoft Defender for Cloud generates a recommendation: *A vulnerability assessment solution should be enabled on your virtual machines*. To remediate a resource, you can click on the Quick Fix button to deploy the necessary VM extension.
+With Microsoft Defender for Cloud for servers, you can quickly deploy the integrated vulnerability assessment solution (as part of Defender for Endpoint or powered by Qualys) with no additional configuration or extra costs. Once the vulnerability assessment scanner is enabled or deployed, it continually assesses all the installed applications on a virtual machine to find vulnerabilities and presents its findings in the Microsoft Defender for Cloud console. When a machine is found that doesn't have *vulnerability* assessment solution deployed, Microsoft Defender for Cloud generates a recommendation: *A vulnerability assessment solution should be enabled on your virtual machines*. To remediate a resource, you can click on the Quick Fix button to deploy the necessary VM extension.
 
 **Explore vulnerability assessment recommendations:**
 
@@ -18,7 +18,7 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 2.	Expend **Remediate vulnerabilities** security control (which contains all recommendations related to security vulnerabilities).
 3.	Make sure you have *A vulnerability assessment solution should be enabled on your virtual machines* recommendation. If you don’t have this recommendation on the list, you will probably need 24 hours to have the recommendation with the assessment.
 4.	Open the **A vulnerability assessment solution should be enabled on your virtual machines” recommendation** – this recommendation is a Quick Fix one which allows you to deploy the VM extension on the desired VMs.
-5.	Expend **Remediation steps** – in addition to the Quick Fix remediation option, you can also use the **view quick fix logic** option to expose an automatic remediation script content (ARM template). **Close this window.**
+5.	Expend **Remediation steps** – in addition to the Quick Fix remediation option, you can also use the **view recommendation logic** option to expose an automatic remediation script content (ARM template). **Close this window.**
 6.	From the unhealthy tab, select both *asclab-win* and *aslab-linux* virtual machines. Click **Fix**.
 7.	On the **Choose a vulnerability assessment solution** select **Recommended: Deploy ASC integrated vulnerability scanner powered by Qualys (included in Microsoft Defender for Cloud for servers)**. Click **Proceed**.
 8.	A window opens, review the list of VMs and click **Remediate 2 resource** button.
@@ -26,16 +26,11 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 
 > Note: You can find a list of supported operating systems [here](https://docs.microsoft.com/en-us/azure/security-center/deploy-vulnerability-assessment-vm#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines).
 
-10.	Ensure the VM extension is deployed on the relevant machines:
-    - From Azure Portal, open **Virtual Machines**.
-    - Select **asclab-win**.
-    - From the sidebar, click on **Extensions**.
-    - Make sure to have `WindowsAgent.AzureSecurityCenter` extension installed and successfully provisioned.
-    - Repeat the process for **asclab-linux** – you should expect to see a different name for the extension on Linux platform: LinuxAgent.AzureSecurityCenter.
+
 
 > Note: There are multiple ways you can automate the process where you need to achieve at scale deployment. More details are available on our [documentation](https://docs.microsoft.com/en-us/azure/security-center/deploy-vulnerability-assessment-vm#automate-at-scale-deployments) and on [blog](https://techcommunity.microsoft.com/t5/azure-security-center/built-in-vulnerability-assessment-for-vms-in-azure-security/ba-p/1577947).
 
-11.	The VA agent will now collect all required artifacts, send them to Qualys Cloud and findings will be presented back on ASC console within 24 hours.
+
 
 **View and remediate vulnerability assessment findings:**
 
@@ -45,7 +40,7 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 4.	On the Security Checks, you should see a list of vulnerabilities found on the affected resources.
 5.	On the recommendation, expend **Affected resources**. You should see two unhealthy resources (asclab-win and asclab-linux) and not applicable resources.
 6.	From the **Unhealthy resources**, select **asclab-win** resource. Here you can view all relevant recommendations for that resource.
-7.	From the findings list, click on the highest vulnerability located at the top (ID 376813).
+7.	From the findings list, click on the highest vulnerability located at the top (ID 91649).
 8.	Notice the vulnerability details on the information pane including the description, impact, severity, remediation steps, etc.
 
 ### Exercise 2: Vulnerability assessment for Containers
@@ -98,7 +93,7 @@ In this lab, you will create a new Logic App and then trigger it automatically u
 1.	On the Azure Portal, type *Logic Apps* on the search field at the top or [click here](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Logic%2Fworkflows).
 2.	Click **Add** to create a new Logic App.
 3.	On the Basics tab, select **Azure subscription 1** and resource group **asclab**.
-4.	On the Logic app name field enter a unique name such as *SendRecommendationsChanges12* (Note: There will be an error if the Logic app name is not unique) .
+4.	On the Logic app name field enter a unique name such as *SendRecommendationsChanges12* (Note: There will be an error if the Logic app name is not unique).
 5.	Select location, for example: **West Europe** (it’s recommended to use the same region as used in the previous exercises).
 6.	Under the Plan section, **select consumption**. 
 7.	Leave all other options as per the default.
