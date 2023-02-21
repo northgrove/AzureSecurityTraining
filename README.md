@@ -18,7 +18,7 @@ To get full use of these days you need to come prepared! That means that you mus
 
 
 Module 1 represents the prerequesites. the whole module must be completed!
-- Step 1: create a new Trial Subscription - this can anly be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
+- Step 1: create a new Trial Subscription - this can only be done if you are eligible for it and have not created a free subscription before. If you are *not* eligibel for a free subscription you can use any other paid subscription you my have or have available thru your employer. The lab will be created within a resourcegroup and can easly be deleted after the workshop.
 
 > NB! if you are using a free azure subscription, dont provision the lab so early that you have used all your free credits befor the workshop starts.
 
