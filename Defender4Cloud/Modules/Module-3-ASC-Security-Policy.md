@@ -91,9 +91,9 @@ Note: Exemptions is a premium Azure policy capability that's offered for Microso
 ### Exercise 4: Create a policy enforcement and deny
 
 1.	From **Microsoft Defender for Cloud sidebar**, select **Recommendations**.
-2.	On recommendations filters, set the **Response action** as **Deny**.
+2.	in the "search recommendations" box, search for "Storage"
 
-![Auditing on SQL server should be enabled](../Images/asc-recommendations-filters-deny.gif?raw=true)
+![Auditing on SQL server should be enabled](../Images/D4C-SearchStorageAccount.png?raw=true)
 
 3.	From the filtered recommendations list, select **Secure transfer to storage accounts should be enabled**.
 
@@ -121,8 +121,7 @@ Select **Review + create** to assign the policy on your subscription.
 
 9. On the recommendation page, **select** the SQL Server resource found on the **unhealthy resources** tab (asclab-sql-xxx) and click **Remediate**. Click **Remediate 1 resource**. By doing both operations, you can now be ensure your existing resources and new ones will be enabled for auditing. Auditing on your SQL Server helps you track database activities across all databases on the server and save them in an audit log.
 
-10.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/prevent-misconfigurations#recommendations-with-denyenforce-options "Recommendations with deny/enforce options") to view a full list of recommendations with deny/enforce options along with detailed explanation of this capability.
-11.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#security-controls-and-their-recommendations "Security controls and their recommendations") to review a list of security controls and their recommendations.
+10.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#security-controls-and-their-recommendations "Security controls and their recommendations") to review a list of security controls and their recommendations.
 
 ### Exercise 5: Create a custom policy
 
@@ -143,8 +142,8 @@ Select **Review + create** to assign the policy on your subscription.
 5.	On Policies tab, select **Add policy definitions**.
 6.	The Add policy definition(s) pane opens: <br>
 Add each policy one by one:
-    - *Managed identity should be used in your Function App*
-    - *Custom subscription owner roles should not exist*
+    - *Function apps should use managed identity*
+    - *MFA should be enabled on accounts with owner permissions on your subscription*
     - *Public network access on Azure SQL Database should be disabled*
     - *Storage accounts should restrict network access*
 
@@ -152,17 +151,18 @@ Add each policy one by one:
 
 ***Add a custom initiative to your subscription***
 
-1.	Navigate to Microsoft Defender for Cloud, and the Security policy page from the sidebar.
+1.	Navigate to Microsoft Defender for Cloud, and the **Environment settings** page from the left sidebar.
 2.	Select **Azure subscription 1** as a scope for your custom initiative.
+3.  Select **Security Policy** from the left sidebar.
 
 > Note: You must add custom standards at the subscription level (or higher) for them to be evaluated and displayed in Microsoft Defender for Cloud.
 
-3.	In the Security policy page, under Your custom initiatives, click **Add a custom initiative**.
-4.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add***.
+4.	In the Security policy page, under Your custom initiatives, click **Add a custom initiative**.
+5.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add***.
 
 ![Assign custom initiative](../Images/asc-assign-custom-initiative.gif?raw=true)
 
-5.	On **Assign Initiative** page, select **Review + Create** and then **Create**.
-6.	Your custom initiative is now assigned.
+6.	On **Assign Initiative** page, select **Review + Create** and then **Create**.
+7.	Your custom initiative is now assigned.
 
 ### Continue with the next lab: [Module 4 - Regulatory Compliance](../Modules/Module-4-Regulatory-Compliance.md)
