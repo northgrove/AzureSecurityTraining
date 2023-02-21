@@ -160,12 +160,15 @@ When the deployment is complete, you should see the following:
    
     ![Environment settings](./Defender4Cloud/Images/mdfc-envsettings2.png?raw=true)
 
-6. Ensure that plans for **Servers** and **Databases** are turned **On**.
+6. Ensure that plans for **Servers** and **SQL Servers on machines** are turned **On**.
+7. Select **Data Collection** on the side panel
+8. Make sure *All Events** are selected
+![Auto-provisioning](./Defender4Cloud/Images/D4C-DataCollection.png?raw=true)
 
 
 
 
-#### Configure the data collection settings in Microsoft Defender for Cloud
+#### Configure *Settings & Monitoring* in Microsoft Defender for Cloud
 
 1. On the **Defender plans** page page for **Azure Subscription 1**, select **Settings & Monitoring** on the top menu.
 
@@ -178,11 +181,7 @@ When the deployment is complete, you should see the following:
 ![Settings-Monitoring](./Defender4Cloud/Images/D4C-SettingsMonitoringPage.png?raw=true)
 3. Click **Edit configuration** under the configuration column.
 4. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **xxx-lab-xxx** (which has been created by the ARM template).
-5. Under **Store additional raw data - Windows security events** section, select **All Events** option.
-
-![Enable Microsoft Defender for Cloud on the workspace level](./Defender4Cloud/Images/D4C-AutoProvisioningConfiguration.png?raw=true)
-
-6. If asked, select **Existing and new VMs** in the pop-up.
+5. Under **Security events storage** section, verify that **All Events** is selected. 
 7. Click on **Apply**.
 8. On the **Settings & Monitoring** page, make sure to also set the following to **On**:
    1. Vulnerability assesment for machines - Click "Edit configuration" and choose "Microsoft Defender vulnerability management" as the vulnerability assesment solution.
