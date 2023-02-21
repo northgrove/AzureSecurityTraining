@@ -30,7 +30,7 @@ In this exercise, you will understand how to use just-in-time (JIT) for virtual 
 
 ![Windows VM - Connect RDP](../Images/asc-win-vm-connect-rdp.gif?raw=true)
 
-11.	Return to the VM blade. On the Connect page, request JIT access. On the **Source IP**, select **My IP** and then click on **Request access**. You should now see the following message: *Download file*.
+11.	On the Connect page, request JIT access. On the **Source IP**, select **My IP** and then click on **Request access**. You should now see the following message: *Download file*.
 
 ![](../Images/lab8download.gif?raw=true)
 12.	Try to connect again to validate your JIT access to the VM. Use the same file you downloaded previously.
