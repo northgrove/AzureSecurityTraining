@@ -93,7 +93,7 @@ You'll need to configure continuous export first to export data to a Log Analyti
 
 ![Regulatory compliance assessment and standards](../Images/lab4rc10.jpg?raw=true)
 
-Compliance dashboard over time 
+Compliance dashboard over time (read note 1 below if not working)
 1.	Go to Microsoft Defender for Cloud, and from the left navigation pane, under the General section, press on the Workbooks button. 
 2.	Select the Compliance Over Time Workbook
 3.	For the workspace, select **asclab-la-XXXXXXXXXX** 
