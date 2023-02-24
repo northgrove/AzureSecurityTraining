@@ -158,7 +158,7 @@ Add each policy one by one:
 > Note: You must add custom standards at the subscription level (or higher) for them to be evaluated and displayed in Microsoft Defender for Cloud.
 
 4.	In the Security policy page, under Your custom initiatives, click **Add a custom initiative**.
-5.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add***.
+5.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add**.
 
 ![Assign custom initiative](../Images/asc-assign-custom-initiative.gif?raw=true)
 
