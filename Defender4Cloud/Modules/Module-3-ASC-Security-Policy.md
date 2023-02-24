@@ -61,17 +61,17 @@ Note: Exemptions is a premium Azure policy capability that's offered for Microso
 2.	Expand **Secure management ports** security control.
 3.	Select the **Management ports should be closed on your virtual machines** recommendation.
 4.	On the list of **unhealthy resources**, see the current resources: *asclab-win* and *asclab-linux*.
-5.	Select the **asclab-win** resource and then click on **Create exemption**.
+5.	Select the **asclab-win** resource and then click on **Exempt**.
 
 ![Create exemption](../Images/asc-management-ports-resource-exemption.gif?raw=true)
 
 6.	The create **exemption pane** opens:
    *	Keep the default name.
-*	Click the expiration button ON and set datetime for two days ahead on 12:00 AM.
+*	Mark the **Set an expiration date** and set datetime for two days ahead on 12:00 AM.
 
     - Select **Waiver** as exemption category.
     - Provide a description: **Testing exemption capability – module 3**.
-    - Select **Save**.
+    - Select **Create**.
   
   ![Modifying Microsoft Defender for Cloud default policy assignment](../Images/Inkedlab3pl6.gif?raw=true)
   
@@ -158,7 +158,7 @@ Add each policy one by one:
 > Note: You must add custom standards at the subscription level (or higher) for them to be evaluated and displayed in Microsoft Defender for Cloud.
 
 4.	In the Security policy page, under Your custom initiatives, click **Add a custom initiative**.
-5.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add***.
+5.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add**.
 
 ![Assign custom initiative](../Images/asc-assign-custom-initiative.gif?raw=true)
 
