@@ -47,6 +47,7 @@ Application control helps you deal with malicious and/or unauthorized software, 
 ![](../Images/lab8aac.gif?raw=true)
 3.	The Adaptive application controls page opens with your VMs grouped into the following tabs: Configured, Recommended and No recommendations.
 4.	Click on the **Recommended** tab.
+5.  Click on one of the "Reviewgroup", notify the recommended applications who is detected on the machine. Click **Audit**
 5.	If this tab does not contain any group yet, it means that Microsoft Defender for Cloud needs at least two weeks of data to define the unique recommendations per group of machines.
 
 ### Exercise 3: File Integrity Monitoring
@@ -86,3 +87,6 @@ Microsoft Defender for Cloud will:
 2.	Ignore any Linux machines that are running other fanotify-based solutions (see details of the fanotify kernel option required in [Linux system requirements](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements))
 3.	Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Microsoft Defender for Cloud.
 Onboarding might take up to 24 hours.
+
+
+### Continue with the next lab: [Module 9 – Defender for Containers](../Modules/Module-9-Defender-For-Containers.md)

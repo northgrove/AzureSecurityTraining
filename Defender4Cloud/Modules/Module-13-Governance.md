@@ -14,21 +14,26 @@ To add a new governance rule for your recommendations, you need to go to the Gov
 
 1. Sign in to the **Azure portal**.
 2. Navigate to **Microsoft Defender for Cloud**, then **Environment settings**.
-3. Select the relevant subscription.
-4. Go to **Goverance rules** on the sidebar.
-5. Click **+ Add Rule**
-6. Fill in the following information:
+3. Click on the **Governance rules** tile
+![Image Governance Rules](../Images/D4C-GovernanceRulesTile.png?raw=true)
+
+4. In the Governance rules experience, Click **+ Create governance rule**
+5. Fill in the following information:
 
 Under General details-
 
 **Rule name**: High severity recommendations set to [your name]
 
+**Scope**: Choose your Azure subscription (Azure Subscription 1)
+
 **Description**: High severity recommendations should be remediated asap.
 
 **Priority**: 1
 
-Under **Affected recommendations**- 
-select **By severity**
+6. Goto **Conditions** by clicking Next.
+
+Under **Impacted recommendations**- 
+select **By severity**. Select High.
 
 Under **Set owner**,
 
@@ -54,3 +59,6 @@ Now all your high severity recommendations in Microsoft defender for Cloud will 
 2.  Click **Show my items only** which is found on the top left corner of the recommendations table.
 3. Select one of the recommendations that you own
 4. Remediate it.
+
+
+### Continue with the next lab: [Module 15 – Integrating Defender for FevOps with GitHub](../Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md)

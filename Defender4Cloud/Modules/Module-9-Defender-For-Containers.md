@@ -60,7 +60,7 @@ docker pull vulnerables/web-dvwa
 
 5. Check the image on your local repository by running the command below:
 ```
-docker pull vulnerables/web-dvwa
+docker images vulnerables/web-dvwa
 ```
 ![Docker images](../Images/5dockerimages.png?raw=true)
 
@@ -93,7 +93,7 @@ docker push secteach365.azurecr.io/vulnerables/web-dvwa
 
 ### Exercise 3: Investigate the recommendation for vulnerabilities in ACR
 
-Once a vulnerable image has been pushed to the Azure Container Registry registry, then Microsoft Defender for Containers will start scanning the image for vulnerabilities, by using Qualys. You will now look into the recommendation in Microsoft Defender for Cloud for this. 
+Once a vulnerable image has been pushed to the Azure Container Registry registry, then Microsoft Defender for Containers will start scanning the image for vulnerabilities, by using Defender for Endpoint Threat and Vulnerability module. You will now look into the recommendation in Microsoft Defender for Cloud for this. 
  
  1. Go to **Microsoft Defender for Cloud** in the **Azure Portal**.
  2. Go to the **Recommendations** tab in Defender for Cloud.
@@ -107,8 +107,9 @@ Once a vulnerable image has been pushed to the Azure Container Registry registry
 <br />
   ![Remediation Steps](../Images/remsteps.png?raw=true)
   <br />
- 6. Select the vulnerability **Container registry images should have vulnerability findings resolved** to get more details about the patch available for it and how to remediate it.
+ 6. Select one of the vulnerability **Debian Security update.....** to get more details about the patch available for it and how to remediate it.
  <br />
  ![Debian](../Images/11debian.png?raw=true)
  
 
+### Continue with the next lab: [Module 13 – Governance](../Modules/Module-13-Governance.md)

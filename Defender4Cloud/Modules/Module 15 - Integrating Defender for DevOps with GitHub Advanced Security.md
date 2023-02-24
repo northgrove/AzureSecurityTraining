@@ -22,7 +22,8 @@ If you alredy finished [Module 1](https://github.com/Azure/Microsoft-Defender-fo
 #### NOTE: GitHub Advanced Security is available for Enterprise accounts on GitHub Enterprise Cloud and GitHub Enterprise Server. Some features of GitHub Advanced Security are also available for public repositories on GitHub.com. For more information, see GitHub’s products.
 
 To setup trial of GitHub Enterprise Cloud, try the steps from this article. In order to setup GitHub Enterprise Server trial account, try the steps from this article.
-For the purpose of this lab, we’re setting up a trial to evaluate GitHub Enterprise Cloud. To get a Trial version of GitHub Enterprise Cloud, click here. This will be a 30-day trial and you don’t need to provide a payment method during the trial unless you add GitHub marketplace apps to your organization that require a payment method. 
+
+For the purpose of this lab, we’re setting up a trial to evaluate GitHub Enterprise Cloud. To get a Trial version of GitHub Enterprise Cloud, click [here](https://github.com/organizations/enterprise_plan?ref_cta=Try%2520Enterprise&ref_loc=user_drawer_side_panel&ref_page=Header+Avatar). This will be a 30-day trial and you don’t need to provide a payment method during the trial unless you add GitHub marketplace apps to your organization that require a payment method. 
 
 Go ahead and create a new repository for the purpose of this lab, make the repository as ‘Public’ for testing purposes in order to benefit from the GHAS features.
 
@@ -41,20 +42,22 @@ Go ahead and create a new repository for the purpose of this lab, make the repos
 ![Azure ADO Connector - Authorize](../Images/Pic2.png?raw=true)
 
 
-7.	Click **Authorize** button. Now Click **Install** button under Install Defender for DevOps app. If this is the first time you’re authorizing your DevOps connection, you’ll receive a pop-up screen, that will ask you confirmation of which repository you'd like to install the app. 
+7.	Click **Authorize** button. Login to github with the trial account just created.
+
+8.  Now Click **Install** button under Install Defender for DevOps app. If this is the first time you’re authorizing your DevOps connection, you’ll receive a pop-up screen, that will ask you confirmation of which repository you'd like to install the app. 
 
 ![Azure ADO Connector - Install](../Images/Pic3.png?raw=true)
 
 ![Azure ADO Connector - Choose Repository](../Images/Pic4.png?raw=true)
 
-8. Choose **All repositories** or **only select repositories** as per your choice and click on **Install**
+9. Choose **All repositories** or **only select repositories** as per your choice and click on **Install**
 
 ![Azure ADO Connector - Install](../Images/Pic5.png?raw=true)
 
-9. Once you click on install, you’ll receive another pop-up window requesting to enter the password inorder to confirm access   
+10. Once you click on install, you’ll receive another pop-up window requesting to enter the password inorder to confirm access   
 
-10. Back to the Azure portal, you’ll notice that the extension is installed > Click on **Review and Create** button to continue.  
-11. Navigating to the **Environment Settings** under **Microsoft Defender for Cloud**, you’ll notice the GitHub Connection was successfully created. 
+11. Back to the Azure portal, you’ll notice that the extension is installed > Click on **Review and Create** button to continue.  
+12. Navigating to the **Environment Settings** under **Microsoft Defender for Cloud**, you’ll notice the GitHub Connection was successfully created. 
 
 ![Azure ADO Connector - Confirming the connector](../Images/Pic6.png?raw=true)
 
