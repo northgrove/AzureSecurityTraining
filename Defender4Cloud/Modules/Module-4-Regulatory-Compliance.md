@@ -80,8 +80,8 @@ You'll need to configure continuous export first to export data to a Log Analyti
 1.	From Microsoft Defender for Cloud's sidebar, select **Environment Settings**.
 2.	Select the subscription for which you want to configure the data export.
 3.	From the sidebar of the settings page for that subscription, select **Continuous Export**.
-4.	Click on the **Log Analytics workspace**. Set the export enable to **On** (which is the tab beside Event hub).
-5.	Leave settings as is. Check off box next to **Regulatory compliance** and choose **All standards selected**
+4.	Click on the **Log Analytics workspace**, (which is the tab beside Event hub). Set the export enable to **On**.
+5.	Check off box next to **Regulatory compliance** and choose **All standards selected**
 6.	From the export frequency options, select both **Streaming updates** and **Snapshots (Preview)**.
 7.	Select target workspace and the Resource Group to be those you created earlier.
 9.	Select Save. You might get a message about Sentinel alerts connector already enabled. Click **Confirm**.
