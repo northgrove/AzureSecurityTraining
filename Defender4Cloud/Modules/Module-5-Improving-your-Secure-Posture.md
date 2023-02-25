@@ -204,7 +204,7 @@ Follow the progress for your created recommendations on the Security Posture pag
     <img width="339" alt="image" src="https://user-images.githubusercontent.com/15238159/179999129-68ba1e61-4a15-4583-9d7c-47e08d073eeb.png">
 3. Click on **Add Rule**
    ![image](https://user-images.githubusercontent.com/15238159/180010137-35a610dd-1738-4f4e-a967-ab69ad9c5acc.png)
-4. Fill out the new Goverance Rules with **Rule Name**, **Description**, **Priority**, **By Severity select High**, **Set Owner by email Address**, **Set Remedation Timeframe to 14 days, **Select both check marks**, click **Create**
+4. Fill out the new Goverance Rules under Genral Detals fill out **Rule Name**, **Scope** (Azure Subscription 1), **Priority** **Description**. And under Conditions, fill out **By Severity select High**, **Set Owner by email Address**, **Set Remedation Timeframe to 14 days, **Select both check marks**. Then click **Create**
    
    <img width="359" alt="image" src="https://user-images.githubusercontent.com/15238159/180060164-6f28dd5f-3791-4f38-989e-0b87b255aa65.png">
 5. To confirm Click on **Security Posture** under **Cloud Security** and select **Owners**
