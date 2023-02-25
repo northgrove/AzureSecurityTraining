@@ -161,7 +161,7 @@ Once you start to get email notifications, you can disable the automation by sel
     - On Microsoft Defender for Cloud sidebar, click on **Recommendations**.
     - Look for any recommendations that has a Quick Fix banner (which is the lightning symbol to the right of the recommendation).
     - Select a resource and then click on **Trigger Logic App** button.
-    - In the Logic App Trigger blade, select the Logic App you created in the previous step (SendRecommendationsChanges).
+    - In the Logic App Trigger blade, select the Logic App you created in the previous step (SendRecommendationsChanges) and click **Trigger**.
     - You should receive an email containing ...
 7.	From the top menu in Microsoft Defender for Cloud, click on **Guides & Feedback**.
 8.	Here you can learn more about workflow automation, get useful links and explore our community tools from the GitHub repository.
