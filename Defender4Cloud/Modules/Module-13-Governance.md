@@ -61,4 +61,4 @@ Now all your high severity recommendations in Microsoft defender for Cloud will 
 4. Remediate it.
 
 
-### Continue with the next lab: [Module 15 – Integrating Defender for FevOps with GitHub](../Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md)
+### Continue with the next lab: [Module 15 – Integrating Defender for DevOps with GitHub](../Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md)

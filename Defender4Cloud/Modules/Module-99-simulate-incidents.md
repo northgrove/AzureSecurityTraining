@@ -20,7 +20,7 @@ TOR Browser download: [Download TOR Browser](https://www.torproject.org/download
 
 
 ### Access a storage account content with TOR Browser
-Creating Access Policy an URL for Storage account content:
+Creating Access Policy and URL for Storage account content:
 1. In the Azure portal browse for **Storage accounts**
 2. Locate the account part of the lab: **asclabxxxxxxx**
 3. Browse the account an navigate to **Containers** in the sidebar

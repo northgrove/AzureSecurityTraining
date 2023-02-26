@@ -21,8 +21,8 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 5.	Expend **Remediation steps** – in addition to the Quick Fix remediation option, you can also use the **view recommendation logic** option to expose an automatic remediation script content (ARM template). **Close this window.**
 6.	From the unhealthy tab, select both *asclab-win* and *aslab-linux* virtual machines. Click **Fix**.
     If there are non unhealty resources, goto the "Healthy resources" tab and verify the "Reason" to be **The machine is onboarded to Microsoft defender vulnerability management**. in that case, jump to **View and remediate vulnerability assessment findings:**
-7.	On the **Choose a vulnerability assessment solution** select **Recommended: Deploy ASC integrated vulnerability scanner powered by Qualys (included in Microsoft Defender for Cloud for servers)**. Click **Proceed**.
-8.	A window opens, review the list of VMs and click **Remediate 2 resource** button.
+7.	On the **Choose a vulnerability assessment solution** select **Microsoft Defender vulnerability management (included with Microsoft Defender for servers)**. Click **Proceed**.
+8.	A window opens, review the list of VMs and click **Fix 2 resource** button.
 9.	Remediation is now in process. Microsoft Defender for Cloud will deploy the Qualys VM extension on the selected VMs, so you track the status using the notification area or by using Azure activity log. Wait 5-10 minutes for the process to complete.
 
 > Note: You can find a list of supported operating systems [here](https://docs.microsoft.com/en-us/azure/security-center/deploy-vulnerability-assessment-vm#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines).
