@@ -197,5 +197,33 @@ SecurityResources
 | project SecureControl , unhealthy, currentscore, maxscore
 ```
 
+### Exercise 5: Follow up some of the Recommendations
+
+#### Secure communication with **Web apps**
+1. in Defender for Cloud select **Inventory** in the sidemenu
+2. Filter for Resource type = **Web Apps** and click on the resource named **asclab-app-xxxxxxx**
+3. Take a look at the recommendations for the Web app, and select **Web Applications should only be accessible over HTTPS**
+4. Expand the **Remediation steps** and make your self familar with the steps needed to remediate.
+5. Click on the **fix** button in the bottom to automaticaly fix the setting for this resource.
+
+The drawback with a quick fix from Defender for Cloud is that it want be valid for any new Web app resources deployd. To make the configuration setting automatic for every new Web app deployd on the subscription, we need to use a Azure Policy to deploy the setting.
+
+##### Create a Azure Policy to set the Web applications should only be accessible over HTTPS setting
+1. go to **Policy** in the Azure Portal
+2. Select **Defenitions** in the sidebar. Click on **+ Initiative defenition**
+3.  Initiative locatin: your Azure Subscription. Add **Web app config** as Name. With **contoso** as existing category. Version=1. Click Next
+4.  **Add policy defenition(s)**. Search for **HTTPS**. 
+5.  Select **Configure App Service apps to only be accessible over HTTPS** and click **add**
+6.  Goto **Policy parameters** and deselect **Only show parameters that need input or review** if needed.
+7.  Verify that **Configure app service apps to only be accessible over HTTPS** har **Modify** as the value for the **Effect** parameter
+8.  Click **Review + create**
+9.  Click **Create**
+
+10. In the **Web app config** initative defenition page. Click **Assign** 
+11. Choose **Remediation** pane. Select **Create a remediation task**
+12. Click **Review + create**
+13. Click **Create**
+
+This Policy wil actively change the selected settings for existing and new Web applications in the subscription.
 
 ### Continue with the next lab: [Module 6 - Workload Protections](../Modules/Module-6-Azure-Defender.md)
