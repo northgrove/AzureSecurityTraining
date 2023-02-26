@@ -16,10 +16,11 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 
 1.	From Microsoft Defender for Cloud sidebar, click on **Recommendations**.
 2.	Expend **Remediate vulnerabilities** security control (which contains all recommendations related to security vulnerabilities).
-3.	Make sure you have *A vulnerability assessment solution should be enabled on your virtual machines* recommendation. If you don’t have this recommendation on the list, you will probably need 24 hours to have the recommendation with the assessment.
-4.	Open the **A vulnerability assessment solution should be enabled on your virtual machines” recommendation** – this recommendation is a Quick Fix one which allows you to deploy the VM extension on the desired VMs.
+3.	Make sure you have *Machines should have a vulnerability assessment solution* recommendation. If you don’t have this recommendation on the list, you will probably need 24 hours to have the recommendation with the assessment.
+4.	Open the **AMachines should have a vulnerability assessment solution” recommendation** – this recommendation is a Quick Fix one which allows you to deploy the VM extension on the desired VMs.
 5.	Expend **Remediation steps** – in addition to the Quick Fix remediation option, you can also use the **view recommendation logic** option to expose an automatic remediation script content (ARM template). **Close this window.**
 6.	From the unhealthy tab, select both *asclab-win* and *aslab-linux* virtual machines. Click **Fix**.
+    If there are non unhealty resources, goto the "Healthy resources" tab and verify the "Reason" to be **The machine is onboarded to Microsoft defender vulnerability management**. in that case, jump to **View and remediate vulnerability assessment findings:**
 7.	On the **Choose a vulnerability assessment solution** select **Recommended: Deploy ASC integrated vulnerability scanner powered by Qualys (included in Microsoft Defender for Cloud for servers)**. Click **Proceed**.
 8.	A window opens, review the list of VMs and click **Remediate 2 resource** button.
 9.	Remediation is now in process. Microsoft Defender for Cloud will deploy the Qualys VM extension on the selected VMs, so you track the status using the notification area or by using Azure activity log. Wait 5-10 minutes for the process to complete.
@@ -36,7 +37,7 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 
 1.	From Microsoft Defender for Cloud sidebar, click on **Recommendations**.
 2.	Expend **Remediate vulnerabilities** security control (which contains all recommendations related to security vulnerabilities).
-3.	Search for **Vulnerabilities in your virtual machines should be remediated**.
+3.	Search for **Machines should have vulnerability findings resolved**.
 4.	On the Security Checks, you should see a list of vulnerabilities found on the affected resources.
 5.	On the recommendation, expend **Affected resources**. You should see two unhealthy resources (asclab-win and asclab-linux) and not applicable resources.
 6.	From the **Unhealthy resources**, select **asclab-win** resource. Here you can view all relevant recommendations for that resource.
@@ -46,7 +47,7 @@ With Microsoft Defender for Cloud for servers, you can quickly deploy the integr
 ### Exercise 2: Vulnerability assessment for Containers
 
 Microsoft Defender for Cloud scans images in your ACR (Azure Container Registry) that are pushed to the registry, imported into the registry, or any images pulled within the last 30 days.
-Then, it exposes detailed findings per image. All vulnerabilities can be found in the following recommendation: Vulnerabilities in Azure Container Registry images should be remediated (powered by Qualys).
+Then, it exposes detailed findings per image. All vulnerabilities can be found in the following recommendation: Container registry images should have vulnerability findings resolved.
 
 To simulate a container registry image with vulnerabilities, we will use ACR tasks commands and sample image:
 
@@ -82,6 +83,8 @@ az acr build --image sample/hello-world:v1 --registry <your container registry n
 12.	Click on the first security check to open the right pane. Notice the vulnerability description, general information, remediation, and the affected resources. **Close this window.**
 
 ![](../Images/Lab5vul2.gif?raw=true)
+
+13.  To filter the findings pr container image, if you have multiple images in your registry, click on the image registry name under Affected resources. You will now see a list over the repositories in the registry. Click on the repository name to see realted images and click on the image name to see related findings.
 
 ### Exercise 3: Automate recommendations with workflow automation
 
@@ -193,27 +196,6 @@ SecurityResources
 | extend SecureControl = properties.displayName, unhealthy = properties.unhealthyResourceCount, currentscore = properties.score.current, maxscore = properties.score.max
 | project SecureControl , unhealthy, currentscore, maxscore
 ```
-### Exercise 5: Creating Governance Rules and Assigning Owners
-Security teams are responsible for improving the security posture of their organizations but they may not have the resources or authority to actually implement security recommendations. Assigning owners with due dates and defining governance rules creates accountability and transparency so you can drive the process of improving the security posture in your organization.
 
-Follow the progress for your created recommendations on the Security Posture page. Weekly email notifications to the owners and managers make sure that they take timely action on the recommendations that can improve your security posture and recommendations.
-
-1. Return to Microsoft Defender for Cloud blade and Click on **Environment settings**. Click the down arrow on **Azure** to show the subscription, and then click the down arrow on **Azure Susbcription 1** to show the workspace. Click on the subscription **Azure Susbcription 1**.
-    ![Environment settings](../Images/mdfc-envsettings.png?raw=true)
-2. From Settings's sidebar, select **Governance Rules** which is found under the **Policy Settings** section.
-    <img width="339" alt="image" src="https://user-images.githubusercontent.com/15238159/179999129-68ba1e61-4a15-4583-9d7c-47e08d073eeb.png">
-3. Click on **Add Rule**
-   ![image](https://user-images.githubusercontent.com/15238159/180010137-35a610dd-1738-4f4e-a967-ab69ad9c5acc.png)
-4. Fill out the new Goverance Rules under Genral Detals fill out **Rule Name**, **Scope** (Azure Subscription 1), **Priority** **Description**. And under Conditions, fill out **By Severity select High**, **Set Owner by email Address**, **Set Remedation Timeframe to 14 days, **Select both check marks**. Then click **Create**
-   
-   <img width="359" alt="image" src="https://user-images.githubusercontent.com/15238159/180060164-6f28dd5f-3791-4f38-989e-0b87b255aa65.png">
-5. To confirm Click on **Security Posture** under **Cloud Security** and select **Owners**
-    <img width="1051" alt="image" src="https://user-images.githubusercontent.com/15238159/180055872-6da285ca-124b-4eaf-955d-f6984fd81ef7.png">
-
-
-```
-
-More details on the [official article](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls) or on the [blog post](https://techcommunity.microsoft.com/t5/azure-security-center/querying-your-secure-score-across-multiple-subscriptions-in/ba-p/1749193)
-```
 
 ### Continue with the next lab: [Module 6 - Workload Protections](../Modules/Module-6-Azure-Defender.md)
