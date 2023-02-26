@@ -82,6 +82,26 @@ Follow the progress for your created recommendations on the Security Posture pag
 More details on the [official article](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls) or on the [blog post](https://techcommunity.microsoft.com/t5/azure-security-center/querying-your-secure-score-across-multiple-subscriptions-in/ba-p/1749193)
 ```
 
+Module 8:
+### Exercise 5: Enable the integration with Microsoft Defender for Endpoint for Windows
+
+[Workload Protections for servers](https://docs.microsoft.com/en-gb/azure/security-center/defender-for-servers-introduction) includes an integrated license for [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/security/endpoint-defender). Together, they provide comprehensive endpoint detection and response (EDR) capabilities.
+When Defender for Endpoint detects a threat, it triggers an alert. The alert is shown in Microsoft Defender for Cloud. From Microsoft Defender for Cloud, you can also pivot to the Defender for Endpoint console, and perform a detailed investigation to uncover the scope of the attack.
+ 
+ 
+If you've never enabled the integration for Windows, the Allow Microsoft Defender for Endpoint to access my data option will enable Microsoft Defender for Cloud to deploy Defender for Endpoint to both your Windows and Linux machines.
+1.	From Microsoft Defender for Cloud's menu, select **Environment settings** and select the subscription (**Azure Subscription 1**) with the Linux machines that you want to receive Defender for Endpoint.
+2.	Then select **Integrations** from the sidebar.
+
+![](../Images/mdfc-integrations.png?raw=true)
+
+3.	Select **Allow Microsoft Defender for Endpoint** to access my data (if it's not already on), and select **Save**.
+
+Microsoft Defender for Cloud will:
+1.	Automatically onboard your Windows and Linux machines to Defender for Endpoint
+2.	Ignore any Linux machines that are running other fanotify-based solutions (see details of the fanotify kernel option required in [Linux system requirements](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements))
+3.	Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Microsoft Defender for Cloud.
+Onboarding might take up to 24 hours.
 
 
 
