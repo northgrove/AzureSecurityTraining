@@ -37,7 +37,20 @@ In this exercise, you will understand how to use just-in-time (JIT) for virtual 
 13.	Now you should get the prompt for the local admin credentials. **Type your username and password** and click **OK**.
 14.	You **are now connected to asclab-win** server. Close the remote control session/log off.
 
-### Exercise 2: Adaptive Application Control
+
+### Exercise 2: Connect using Azure Bastion
+> ! NB ! Azure Bastion will add additional cost on your lab subscription
+Azure Bastion allows you to connect to the VM, with RDP or SSH, from the Azure portal, embedded in a browser window. This will allow you to have Azure AD authenticate the session, with all the integrated security potecting it and you can control who are allowed to connect with Azure RBAC.
+
+1. On VM Blade, choose the connect page and the Bastion tab.
+2. Click on **Use Bastion*
+3. Click on **Deploy Bastion** / **Deploy Bastion using standards**
+4. Wait for the Bastion service to be depoyed (this will take some minutes).
+5. When ready, type in the username and password for the VM an click **connect**
+6. (the previouse excersice JIT NSG rule my interfere with th
+
+
+### Exercise 3: Adaptive Application Control
 
 Application control helps you deal with malicious and/or unauthorized software, by allowing only specific applications to run on your machines.
 
@@ -50,7 +63,7 @@ Application control helps you deal with malicious and/or unauthorized software, 
 5.  Click on one of the "Reviewgroup", notify the recommended applications who is detected on the machine. Click **Audit**
 5.	If this tab does not contain any group yet, it means that Microsoft Defender for Cloud needs at least two weeks of data to define the unique recommendations per group of machines.
 
-### Exercise 3: File Integrity Monitoring
+### Exercise 4: File Integrity Monitoring
 
 File integrity monitoring (FIM), also known as change monitoring, examines operating system files, Windows registries, application software, Linux system files, and more, for changes that might indicate an attack.
 It maps the current state of these items with the state during the previous scan and alerts you if suspicious modifications have been made. To enable FIM, follow the instructions below:
@@ -68,25 +81,6 @@ You'll now be able to track changes to files in resource associated with the log
 
 ![](../Images/mdfc-fimtrack.png?raw=true)
 
-### Exercise 4: Enable the integration with Microsoft Defender for Endpoint for Windows
-
-[Workload Protections for servers](https://docs.microsoft.com/en-gb/azure/security-center/defender-for-servers-introduction) includes an integrated license for [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/security/endpoint-defender). Together, they provide comprehensive endpoint detection and response (EDR) capabilities.
-When Defender for Endpoint detects a threat, it triggers an alert. The alert is shown in Microsoft Defender for Cloud. From Microsoft Defender for Cloud, you can also pivot to the Defender for Endpoint console, and perform a detailed investigation to uncover the scope of the attack.
- 
- 
-If you've never enabled the integration for Windows, the Allow Microsoft Defender for Endpoint to access my data option will enable Microsoft Defender for Cloud to deploy Defender for Endpoint to both your Windows and Linux machines.
-1.	From Microsoft Defender for Cloud's menu, select **Environment settings** and select the subscription (**Azure Subscription 1**) with the Linux machines that you want to receive Defender for Endpoint.
-2.	Then select **Integrations** from the sidebar.
-
-![](../Images/mdfc-integrations.png?raw=true)
-
-3.	Select **Allow Microsoft Defender for Endpoint** to access my data (if it's not already on), and select **Save**.
-
-Microsoft Defender for Cloud will:
-1.	Automatically onboard your Windows and Linux machines to Defender for Endpoint
-2.	Ignore any Linux machines that are running other fanotify-based solutions (see details of the fanotify kernel option required in [Linux system requirements](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements))
-3.	Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Microsoft Defender for Cloud.
-Onboarding might take up to 24 hours.
 
 
 ### Continue with the next lab: [Module 9 – Defender for Containers](../Modules/Module-9-Defender-For-Containers.md)
