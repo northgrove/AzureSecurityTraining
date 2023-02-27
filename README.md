@@ -53,6 +53,9 @@ To use these labs, you should have Azure Subscription Trial, this allows you to 
 Before the end of your first 30 days, you'll be notified and have the chance to upgrade and start paying only for the resources you use beyond the free amounts.
 > The organizor or instructor, etc taks no responsibility for any cost this lab my generate in your subscription.
 
+
+> If you have trouble creating a free Azure Subscription Trial, contact kjetil.nordlund@microsoft.com to get a Azure Promo pass to exchange into a subscription with free credit (en Azure Tenant is still required)
+
 ### Instructions:
 1. Open an **In-Private** session in your web browser and navigate to https://azure.microsoft.com/en-us/free
 2. On the main part of this page, click **Start free** and use your Microsoft Account credentials to you to login to Azure Portal.
