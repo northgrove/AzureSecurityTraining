@@ -23,7 +23,7 @@ See this README for full description of the prerequisites: [**Prerequisites for 
 
 ## Modules
 
-[**Module 1 – Prerequisites - Preparing the Environment (L100)**](../README.md)
+
 
 To be done on the Workshop day:<br>
 [**Module 2 – Exploring Microsoft Defender for Cloud (L100)**](./Modules/Module-2-Exploring-Azure-Security-Center.md)
@@ -60,11 +60,6 @@ To be done on the Workshop day:<br>
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
 - [File Integrity Monitoring](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-3-file-integrity-monitoring)
 
-[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
-- [Install Docker Desktop](./Modules/Module-1-Preparing-the-Environment.md)
-- [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
-- [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
-
 [**Module 13 – Governance (L300)**](./Modules/Module-13-Governance.md)
 - [Add a new Governance Rule in Microsoft Defender for Cloud](./Modules/Module-13-Governance.md#exercise-1-add-a-new-governance-rule-in-microsoft-defender-for-cloud)
 - [See recommendations that you're the owner of](./Modules/Module-13-Governance.md#exercise-2-see-recommendations-that-youre-the-owner-of)
@@ -85,13 +80,6 @@ To be done on the Workshop day:<br>
 
 ## Extras
 
-[**Extra: Module 17 - Defender CSPM (L200)**](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md)
-- [Exercise 1: Preparing the Environment for DCSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-1-preparing-the-environment-for-dcspm-plan)
-- [Exercise 2: Enabling Defender CSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-2-enabling-defender-cspm-plan)
-- [Exercise 3: Explore Attack Paths in your Environment](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
-- [Exercise 4: Build query with Cloud Security Explorer](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
-- [Exercise 5: Assign Governance Rule](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
-
 [**Extra: Module 16 - Protecting On-Prem Servers in Defender for Cloud (L300)**](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
 - [Install Hyper-V which will be used to create the server on your own machine](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-1-install-hyper-v-which-will-be-used-to-create-the-server-on-your-own-machine)
 - [Using Hyper-V, confirm that there's a virtual switch already installed on your desktop](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-2-using-hyper-v-confirm-that-theres-a-virtual-switch-already-installed-on-your-desktop)
@@ -102,6 +90,26 @@ To be done on the Workshop day:<br>
 - [Install Azure Arc on the VM so the VM will be protected by Micrsosoft Defender for Cloud](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-7-install-azure-arc-on-the-vm-so-the-vm-will-be-protected-by-micrsosoft-defender-for-cloud)
 - [Confirm that the "on-prem" server we created is being detected by the Azure portal](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-8-confirm-that-the-on-prem-server-we-created-is-being-detected-by-the-azure-portal)
 
+[**Extra: Module 17 - Defender CSPM (L200)**](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md)
+- [Exercise 1: Preparing the Environment for DCSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-1-preparing-the-environment-for-dcspm-plan)
+- [Exercise 2: Enabling Defender CSPM plan](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-2-enabling-defender-cspm-plan)
+- [Exercise 3: Explore Attack Paths in your Environment](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
+- [Exercise 4: Build query with Cloud Security Explorer](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
+- [Exercise 5: Assign Governance Rule](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
+
+[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
+- [Install Docker Desktop](./Modules/Module-1-Preparing-the-Environment.md)
+- [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
+- [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
+
+[**Module 10 – GCP (L300)**](./Modules/Module-10-GCP.md)
+- [Create a GCP project](./Modules/Module-10-GCP.md#exercise-1-create-a-gcp-project)
+- [Create the GCP connector in Microsoft Defender for Cloud](./Modules/Module-10-GCP.md#exercise-2-create-the-gcp-connector-in-microsoft-defender-for-cloud)
+- [Investigate the GCP recommendations](./Modules/Module-10-GCP.md#exercise-3-investigate-the-gcp-recommendations)
+
+[**Module 11 – AWS (L300)**](./Modules/Module-11-AWS.md)
+- [Create an AWS account](./Modules/Module-11-AWS.md#exercise-1-create-an-aws-account)
+- [Create an AWS connector for the new AWS account in Microsoft Defender for Cloud](./Modules/Module-11-AWS.md#exercise-2-create-an-aws-connector-for-the-new-aws-account-in-microsoft-defender-for-cloud)
 
 [**Extra: Module 7 - Exporting Defender for Cloud content to Microsoft Sentinel**](./Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
 

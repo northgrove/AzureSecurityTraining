@@ -15,7 +15,7 @@ To get started with Microsoft Defender for Cloud, you must have a subscription t
 
 1.	On Microsoft Defender for Cloud blade, from the left navigation pave, click on **Environment Settings**. 
 2. Then select **Subscription 1** and from the left navigation select **Security policy**.
-3.	As you can see on the top part, there is 1 assignment under **Default initiative** which is **ASC default (subscription: xxx...)**.
+3.	As you can see on the top part, there is 1 assignment under **Default initiative** which is **ASC default (subscription: xxx...)** or **Azure Security Benchmark**.
 
 ![Microsoft Defender for Cloud default policy](https://user-images.githubusercontent.com/45104504/192042650-ff0c1b80-efc5-4e11-9af5-28f4e444fc8d.png)
 
@@ -119,8 +119,8 @@ Note: Exemptions is a premium Azure policy capability that's offered for Microso
 Select **Review + create** to assign the policy on your subscription.
 * Click **Create**
 
-9. On the recommendation page, **select** the SQL Server resource found on the **unhealthy resources** tab (asclab-sql-xxx) and click **Remediate**. Click **Remediate 1 resource**. By doing both operations, you can now be ensure your existing resources and new ones will be enabled for auditing. Auditing on your SQL Server helps you track database activities across all databases on the server and save them in an audit log.
-
+9. On the recommendation page, **select** the SQL Server resource found on the **unhealthy resources** tab (asclab-sql-xxx) and click **Fix**. Choose "asclab-la-..." as Workspace ID. Click **Fix 1 resource**. By doing both operations, you can now be ensure your existing resources and new ones will be enabled for auditing. Auditing on your SQL Server helps you track database activities across all databases on the server and save them in an audit log.
+![fix sql](../Images/D4C-FixSQLserver.png?raw=true)
 10.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#security-controls-and-their-recommendations "Security controls and their recommendations") to review a list of security controls and their recommendations.
 
 ### Exercise 5: Create a custom policy

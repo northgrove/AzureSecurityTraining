@@ -12,7 +12,7 @@ This exercise guides you on how to connect and protect GCP projects using Defend
 
 First you need to create a GCP project. 
 
-1.	Navigate to [Create free GCP](https://www.google.com/aclk?sa=l&ai=DChcSEwiA7K7Gubn3AhUJuu0KHbACBZkYABAAGgJkZw&sig=AOD64_0Cc0zndLvPEu7wV4blEFwWvjOWag&q&adurl&ved=2ahUKEwihk6nGubn3AhVFZcAKHWP5BYkQ0Qx6BAgDEAE).  
+1.	Navigate to [Create free GCP](https://cloud.google.com/free).  
 ![Docker Version in Powershell](../Images/1gcpintro.png?raw=true)
 2.  Click **Get started for free**.
 3.  Now select either an existing Google account or create a new one. 

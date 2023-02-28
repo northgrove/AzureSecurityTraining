@@ -145,6 +145,10 @@ jobs:
     continue-on-error: false
     strategy:
       fail-fast: true
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
       
     steps:
     - uses: actions/checkout@v3

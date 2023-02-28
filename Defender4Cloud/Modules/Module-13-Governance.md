@@ -51,6 +51,8 @@ Select **Notify owners weekly on open and overdue tasks**.
 
 Select **Create**
 
+Click **OK** to override existing assignments, if asked.
+
 Now all your high severity recommendations in Microsoft defender for Cloud will have you as the owner, and you'll have 30 days from when they go unhealthy before SEcure Score is affected.
 
 ### Exercise 2: See recommendations that you're the owner of
