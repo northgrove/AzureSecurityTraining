@@ -32,6 +32,21 @@
 },
 "resources": [
     {
+        "name": "[variables('storageName')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "location": "[resourceGroup().location]",
+        "apiVersion": "2019-06-01",
+        "sku": {
+            "name": "[parameters('storageAccountType')]"
+        },
+        "dependsOn": [],
+        "tags": "[parameters('resourceTags')]",
+        "kind": "StorageV2",
+        "properties": {
+            "supportsHttpsTrafficOnly": false
+        }
+    },
+    {
         "name": "[variables('appServicePlanName')]",
         "type": "Microsoft.Web/serverfarms",
         "location": "[resourceGroup().location]",
