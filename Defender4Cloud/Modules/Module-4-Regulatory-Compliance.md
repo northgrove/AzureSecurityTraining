@@ -87,11 +87,10 @@ You'll need to configure continuous export first to export data to a Log Analyti
 9.	Select Save. You might get a message about Sentinel alerts connector already enabled. Click **Confirm**.
 10.	Wait for the first snapshot to occur. 
 
-![Regulatory compliance assessment and standards](../Images/lab4rc8.jpg?raw=true)
+![Regulatory compliance assessment and standards](../Images/D4C-ContiniousExport1.png?raw=true)
+![Regulatory compliance assessment and standards](../Images/D4C-ContiniousExport2.png?raw=true)
 
-![Regulatory compliance assessment and standards](../Images/lab4rc9.jpg?raw=true)
-
-![Regulatory compliance assessment and standards](../Images/lab4rc10.jpg?raw=true)
+You may also include **Security recommendations** and **Secure Score** as well, if you want that information in i.e Microsoft Sentinel. Its recommended to use a common Log Analytics Workspace for both Defender for Cloud and Sentinel.
 
 Compliance dashboard over time (read note 1 below if not working)
 1.	Go to Microsoft Defender for Cloud, and from the left navigation pane, under the General section, press on the Workbooks button. 
