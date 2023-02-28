@@ -3,7 +3,7 @@
 <p align="left"><img src="../Images/asc-labs-intermediate.gif?raw=true"></p>
 
 #### 🎓 Level: 200 (Intermediate)
-#### ⌛ Estimated time to complete this lab: 30 minutes
+#### ⌛ Estimated time to complete this lab: 45 minutes
 
 ## Objectives
 In this exercise, you will learn how to configure GitHub Connector in Defender for DevOps.
@@ -21,11 +21,55 @@ If you alredy finished [Module 1](https://github.com/Azure/Microsoft-Defender-fo
 ### Exercise 3: Obtain trial of GitHub Enterprise Cloud account
 #### NOTE: GitHub Advanced Security is available for Enterprise accounts on GitHub Enterprise Cloud and GitHub Enterprise Server. Some features of GitHub Advanced Security are also available for public repositories on GitHub.com. For more information, see GitHub’s products.
 
-To setup trial of GitHub Enterprise Cloud, try the steps from this article. In order to setup GitHub Enterprise Server trial account, try the steps from this article.
 
 For the purpose of this lab, we’re setting up a trial to evaluate GitHub Enterprise Cloud. To get a Trial version of GitHub Enterprise Cloud, click [here](https://github.com/organizations/enterprise_plan?ref_cta=Try%2520Enterprise&ref_loc=user_drawer_side_panel&ref_page=Header+Avatar). This will be a 30-day trial and you don’t need to provide a payment method during the trial unless you add GitHub marketplace apps to your organization that require a payment method. 
 
-Go ahead and create a new repository for the purpose of this lab, make the repository as ‘Public’ for testing purposes in order to benefit from the GHAS features.
+#### Create an Github organization
+
+1. From the link above, choose **Enterprise cloud**
+
+![Github Trial Plan](../Images/Git-PickYourTrialPlan.png?raw=true)
+
+2. Create a new Github account if needed, or click **Sign in** if you already have one.
+
+![Github create accoung](../Images/Git-CreateGithubAccount.png?raw=true)
+
+3. After signed in, create a new github organizaion
+
+![Github create Enterprise](../Images/Git-CreateGithubEnterpiseCloud.png?raw=true)
+
+4. Welcome to your new Enterprise Organization and a 30 day trial
+
+![Github Enterprise org](../Images/Git-OrgCreated.png?raw=true)
+
+#### Fork a couple of repos
+
+To have some security issues to detect, you could **fork** a couple of repos. Fork these two repos into your organization:
+
+>
+> https://github.com/github/code-scanning-javascript-demo
+>
+> https://github.com/microsoft/windows-containers-demos
+>
+
+For each repo do:
+
+1. Click on the **Fork** button in top right corner
+   ![Fork](../Images/Git-ForkARepo.png?raw=true)
+2. Choose your Organization as the owner of the new repo
+   ![Fork owner](../Images/Git-ForkChooseOrg.png?raw=true)
+3. In the new repository, forked from the original. Click on **Setting** and then **Code security and Analyst** from the left sidebar.
+4. Enable **Dependabot alerts**, **Dependabot security updates**, **Dependency graph**, **Private vulnerability reporting** and **Secret scanning** (located at the bottom)
+   ![Enable Code Security](../Images/Git-EnableCodeSecurity.png)
+5. In the **Code scanning** section, Click **Set up** right to **CodeQL analysis** and choose **Advanced** (Choose Default if available)
+   ![Code scanning](../Images/Git-CodeScanning.png)
+6. Commit the **CodeQL.yml** file by clicking **Start Commit** in top right corner. Type in an apropriate heading and description. Click **Commit new file**
+   ![Commit CodeQL](../Images/Git-CommitCodeQL.png)
+7. To see the code scanning running, click on **Actions** in the top menu bar.
+
+Repeat the same steps for the other Github repo.
+
+
 
 ### Exercise 4: Connecting your GitHub organization
 
@@ -60,6 +104,8 @@ Go ahead and create a new repository for the purpose of this lab, make the repos
 12. Navigating to the **Environment Settings** under **Microsoft Defender for Cloud**, you’ll notice the GitHub Connection was successfully created. 
 
 ![Azure ADO Connector - Confirming the connector](../Images/Pic6.png?raw=true)
+
+Browse the **DevOps Security** section from the side bar to see the status of your github repos (it could take some time before the status is reflected in Defender for Cloud).
 
 ### Exercise 5: Configure the Microsoft Security DevOps GitHub action:
 

@@ -47,7 +47,7 @@ Azure Bastion allows you to connect to the VM, with RDP or SSH, from the Azure p
 3. Click on **Deploy Bastion** / **Deploy Bastion using standards**
 4. Wait for the Bastion service to be depoyed (this will take some minutes).
 5. When ready, type in the username and password for the VM an click **connect**
-6. (the previouse excersice JIT NSG rule my interfere with th
+6. (the previouse excersice JIT NSG rule my interfere with this connection, in case: delete the JIT rdp rule from the network tab on the sidebar)
 
 
 ### Exercise 3: Adaptive Application Control
