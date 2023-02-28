@@ -24,11 +24,11 @@
 },
 "variables": {
 
-    "appServicePlanName": "asclab-splan",
-    "appServiceName": "[toLower(concat('asclab-app-', uniqueString(subscription().subscriptionId)))]",
-    "kvName": "[toLower(concat('asclab-kv-',uniqueString(subscription().subscriptionId)))]",
-    "storageName": "[toLower(concat('asclabsa', uniqueString(subscription().subscriptionId)))]",
-    "functionName": "[toLower(concat('asclab-fa-',uniqueString(subscription().subscriptionId)))]"
+    "appServicePlanName": "asclab-splan2",
+    "appServiceName": "[toLower(concat('asclab2-app-', uniqueString(subscription().subscriptionId)))]",
+    "kvName": "[toLower(concat('asclab2-kv-',uniqueString(subscription().subscriptionId)))]",
+    "storageName": "[toLower(concat('asclabsa2', uniqueString(subscription().subscriptionId)))]",
+    "functionName": "[toLower(concat('asclab2-fa-',uniqueString(subscription().subscriptionId)))]"
 },
 "resources": [
     {
@@ -45,6 +45,39 @@
             "name": "[variables('appServicePlanName')]",
             "numberOfWorkers": 1
         }
+    },
+    {
+        "type": "Microsoft.KeyVault/vaults",
+        "name": "[variables('kvName')]",
+        "apiVersion": "2016-10-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "sku": {
+                "family": "A",
+                "name": "standard"
+            },
+            "tenantId": "[subscription().tenantid]",
+            "accessPolicies": [
+                {
+                    "tenantId": "[subscription().tenantid]",
+                    "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('functionName')),'2019-08-01', 'full').identity.principalId]",
+                    "permissions": {
+                        "keys": [],
+                        "secrets": [
+                            "get"
+                        ],
+                        "certificates": []
+                    }
+                }
+            ],
+            "enabledForDeployment": false,
+            "enabledForDiskEncryption": false,
+            "enabledForTemplateDeployment": false
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', variables('appServiceName'))]"
+        ],
+        "tags": "[parameters('resourceTags')]"
     },
     {
         "name": "[variables('appServiceName')]",
