@@ -72,10 +72,10 @@ To be done on the Workshop day:<br>
 - [Configure the Microsoft Security DevOps GitHub action](./Modules/Module%2015%20-%20Integrating%20Defender%20for%20DevOps%20with%20GitHub%20Advanced%20Security.md#exercise-5-configure-the-microsoft-security-devops-github-action)
 
 
-[**Module 99 – Simulate Incidents**](./Modules/Module-13-simulate-incidents.md)
-- [Anonymous Access to Azure Resources](./Modules/Module-13-simulate-incidents.md#anonymous-access-to-azure-resources)
-- [Simulate alerts on a Windows VM](/Modules/Module-13-simulate-incidents.md#simulate-alerts-on-a-windows-vm)
-- [Simulate AKS alert on Microsoft Defender for Cloud](./Modules/Module-13-simulate-incidents.md#simulate-aks-alert-on-microsoft-defender-for-cloud)
+[**Module 99 – Simulate Incidents**](./Modules/Module-99-simulate-incidents.md)
+- [Anonymous Access to Azure Resources](./Modules/Module-99-simulate-incidents.md#anonymous-access-to-azure-resources)
+- [Simulate alerts on a Windows VM](/Modules/Module-99-simulate-incidents.md#simulate-alerts-on-a-windows-vm)
+- [Simulate AKS alert on Microsoft Defender for Cloud](./Modules/Module-99-simulate-incidents.md#simulate-aks-alert-on-microsoft-defender-for-cloud)
 
 
 ## Extras
