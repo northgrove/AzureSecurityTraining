@@ -237,6 +237,15 @@ Enable integration with Microsoft Sentinel
 When you connect Microsoft Defender for Cloud to Azure Sentinel, the status of Microsoft Defender for Cloud alerts that get ingested into Azure Sentinel is synchronized between the two services. So, for example, when an alert is closed in Microsoft Defender for Cloud, that alert will display as closed in Azure Sentinel as well. Changing the status of an alert in Microsoft Defender for Cloud "won't"* affect the status of any Azure Sentinel incidents that contain the synchronized Azure Sentinel alert, only that of the synchronized alert itself.<br/>
 Enabling this preview feature, bi-directional alert synchronization, will automatically sync the status of the original Microsoft Defender for Cloud alerts with Azure Sentinel incidents that contain the copies of those Microsoft Defender for Cloud alerts. So, for example, when an Azure Sentinel incident containing an Microsoft Defender for Cloud alert is closed, Microsoft Defender for Cloud will automatically close the corresponding original alert.
 
+<br>
+<br>
+
+## Step 5: Verify your deployment
+Verify your deploymnet to make sure that your environment er ready. Defender for Cloud will probably need a day or so to be fully deployed and that all lab elements are available.
+Make sure that:
+1. you see the expected resources in the inventory tab
+2. you have multiple recommendations (10th of) populated under recommendations
+3. you have a default initiativ like "ASC Default" or "Azure security benchmark" under Environment settings -> your-subscription-name -> Security Policy on your subscription
 
 <br>
 <br>
