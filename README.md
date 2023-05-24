@@ -129,7 +129,9 @@ When the deployment is complete, you should see the following:
 
 ![Template deployment completed](./Defender4Cloud/Images/asc-deployment-completed.gif?raw=true)
 
-
+2. Do the same deployment of this deployment file (will add some additional servers for the CSMP module):
+   
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMicrosoft-Defender-for-Cloud%2Fmaster%2FLabs%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
 <br>
 <br>
@@ -237,7 +239,7 @@ Enabling this preview feature, bi-directional alert synchronization, will automa
 <br>
 <br>
 
-## Confirmation - Azure Security Training: Microsoft Oslo, 1.mars 2023
+## Confirmation - Azure Security Training: Microsoft Oslo, 1.june 2023
 To confirm you have successfully deployed the lab and are ready for the workshop, please send an email to kjetil.nordlund@microsoft.com. See you there!
 
 <br>
