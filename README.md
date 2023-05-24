@@ -129,7 +129,9 @@ When the deployment is complete, you should see the following:
 
 ![Template deployment completed](./Defender4Cloud/Images/asc-deployment-completed.gif?raw=true)
 
-2. Do the same deployment of this deployment file (will add some additional servers for the CSMP module):
+<br>
+
+2. **Do another deployment with this deployment file (will add some additional servers for the CSMP module):**
    
    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMicrosoft-Defender-for-Cloud%2Fmaster%2FLabs%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
