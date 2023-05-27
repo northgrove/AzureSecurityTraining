@@ -72,7 +72,7 @@
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
         //"nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('networkSecurityGroupName'))]",
-        "nicName": "[concat(variables('vmName'), '-nic')",
+        "nicName": "[concat(variables('vmName'), '-nic')]",
         "osType": {
             "publisher": "Canonical",
             "offer": "0001-com-ubuntu-minimal-kinetic",
