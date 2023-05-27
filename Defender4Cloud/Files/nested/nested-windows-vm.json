@@ -67,7 +67,7 @@
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
         "publicIPAddressType": "Dynamic",
-        "vmName": "[substring(toLower(concat('dscpmWin',uniqueString(subscription().subscriptionId))),0,15)]",
+        "vmName": "[toLower(concat('dcspmWin',substring(uniqueString(subscription().subscriptionId)),0,15 ))]",
         "vmSize": "Standard_D2s_v3",
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
