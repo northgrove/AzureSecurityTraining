@@ -133,7 +133,7 @@ When the deployment is complete, you should see the following:
 
 2. **Do another deployment with this deployment file (will add some additional servers for the CSMP module):**
    
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMicrosoft-Defender-for-Cloud%2Fmaster%2FLabs%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
    1. You will be redirected to Azure Portal > custom deployment page where you should specify mandatory fields for deployment.
    ![Template deployment CSPM](./Defender4Cloud//Images/215821808-99521c72-065c-4078-af9c-893ac8719e24.png)
