@@ -137,6 +137,7 @@ When the deployment is complete, you should see the following:
    
    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
+> 30.05.23 kl 13:45: Fixed: Removed publicIP deployment for these two servers to be within the trial subscription quota
 > ❗30.05.23 kl 11:40: Have got feedback that this deployment failes with the following error. Will check how this can be solved. This deployment will only impact "Cloud Security Explorer" the rest of the lab modules should be fine. So not critical if it can't be deployed.
 > ***"Subscription has a quota of 3 for resources of type PublicIpAddress with sku SkuNotSpecified. Subscription currently has 3 resources and the template contains 2 new resources of the this type which exceeds the quota. Please contact support to increase the quota for resource type PublicIpAddress"***
 
