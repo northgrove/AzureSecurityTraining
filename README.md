@@ -135,7 +135,9 @@ When the deployment is complete, you should see the following:
 
 2. **Do another deployment with this deployment file (will add some additional servers for the CSMP module):**
    
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
+> 30.05.23 kl 15:50: Fixed again by adding these configuration changes to existing VMs insted of creating two new VMs
 > 30.05.23 kl 14:10: hit new quota limit on CPU cores. Removing this deployment as it is only a minor module.
 > 30.05.23 kl 13:45: Fixed: Removed publicIP deployment for these two servers to be within the trial subscription quota
 > ❗30.05.23 kl 11:40: Have got feedback that this deployment failes with the following error. Will check how this can be solved. This deployment will only impact "Cloud Security Explorer" the rest of the lab modules should be fine. So not critical if it can't be deployed.
