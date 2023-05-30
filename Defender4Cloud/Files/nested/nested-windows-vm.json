@@ -89,9 +89,6 @@
             "apiVersion": "2022-04-01",
             "name": "[variables('kyv-role-GUID')]",
             "scope": "[concat('Microsoft.KeyVault/vaults', '/', parameters('keyVaultName'))]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]"
-            ],
             "properties": {
                 "roleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/00482a5a-887f-4fb3-b363-3b7fe8e74483')]",
                 "principalId": "[reference(resourceId('Microsoft.Compute/virtualMachines', variables('vmName')), '2022-03-01', 'full').identity.principalId]",
@@ -105,9 +102,6 @@
             "apiVersion": "2022-04-01",
             "name": "[variables('sql-role-GUID')]",
             "scope": "[concat('Microsoft.Sql/servers/', parameters('sqlServerName'))]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]"
-            ],
             "properties": {
                 "roleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/6d8ee4ec-f05a-4a1d-8b00-a9b17e38b437')]",
                 "principalId": "[reference(resourceId('Microsoft.Compute/virtualMachines', variables('vmName')), '2022-03-01', 'full').identity.principalId]",
@@ -121,9 +115,6 @@
             "apiVersion": "2022-04-01",
             "name": "[variables('sac-role-GUID')]",
             "scope": "[concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]"
-            ],
             "properties": {
                 "roleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/17d1049b-9a84-46fb-8f53-869881c3d3ab')]",
                 "principalId": "[reference(resourceId('Microsoft.Compute/virtualMachines', variables('vmName')), '2022-03-01', 'full').identity.principalId]",
