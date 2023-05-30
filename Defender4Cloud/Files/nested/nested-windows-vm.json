@@ -65,22 +65,7 @@
     //variables
     "variables": {
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-        "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
-        "publicIPAddressType": "Dynamic",
         "vmName": "dcspmlab-winsrv",
-        "vmSize": "Standard_D2s_v3",
-        //"virtualNetworkName": "asclab-vnet",
-        //"networkSecurityGroupName": "myNSG",
-        //"nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('networkSecurityGroupName'))]",
-        "nicName": "[concat(variables('vmName'), '-nic')]",
-        "osType": {
-            "publisher": "MicrosoftWindowsServer",
-            "offer": "WindowsServer",
-            "sku": "2019-datacenter-gensecond",
-            "version": "17763.3130.220404",
-            "osDiskName": "[concat(variables('vmName'), '-osdisk')]",
-            "dataDiskName": "[concat(variables('vmName'), '-datadisk')]"
-        },
         //"kyv-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
         //"sql-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
         //"sac-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
@@ -96,89 +81,7 @@
     },
     //resources
     "resources": [
-  
-        //create network interface
-        {
-            "type": "Microsoft.Network/networkInterfaces",
-            "name": "[variables('nicName')]",
-            "apiVersion": "2021-02-01",
-            "location": "[parameters('location')]",
-            "properties": {
-                "ipConfigurations": [
-                {
-                    "name": "ipconfig1",
-                    "properties": {
-                    "privateIPAllocationMethod": "Dynamic",
-                    "subnet": {
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('subnetName'))]"
-                    }
-                    }
-                }
-                ]
-            }
 
-        },
-        //create virtual machine
-        {
-            "type": "Microsoft.Compute/virtualMachines",
-            "apiVersion": "2021-03-01",
-            "name": "[variables('vmName')]",
-            "location": "[parameters('location')]",
-            "identity": {
-                "type": "SystemAssigned"
-            },
-            "properties": {
-                "hardwareProfile": {
-                "vmSize": "[variables('vmSize')]"
-                },
-                "osProfile": {
-                    "computerName": "[variables('vmName')]",
-                    "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]",
-                    "windowsConfiguration": {
-                        "enableAutomaticUpdates": false,
-                        "provisionVmAgent": true,
-                        "patchSettings": {
-                            "enableHotpatching": false,
-                            "assessmentMode": "ImageDefault",
-                            "patchMode": "Manual"
-                        }
-                    }
-                },
-                "storageProfile": {
-                "imageReference": {
-                    "publisher": "MicrosoftWindowsServer",
-                    "offer": "WindowsServer",
-                    "sku": "[variables('osType').sku]",
-                    "version": "[variables('osType').version]"
-                },
-                "osDisk": {
-                    "createOption": "FromImage",
-                    "name": "[variables('osType').osDiskName]",
-                    "managedDisk": {
-                    "storageAccountType": "StandardSSD_LRS"
-                    }
-                },
-                "dataDisks": [
-                    {
-                    "diskSizeGB": 1023,
-                    "lun": 0,
-                    "createOption": "Empty",
-                    "name": "[variables('osType').dataDiskName]"
-                    }
-                ]
-                },
-                "networkProfile": {
-                "networkInterfaces": [
-                    {
-                    "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
-                    }
-                ]
-                }
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"]
-        },
         //Assign Azure Roles - To assign Azure roles you must have Microsoft.Authorization/roleAssignments/write permissions, such as User Access Administrator or Owner
         //Assign Key Vault Access permissions to VM system identity
         {
