@@ -65,7 +65,7 @@
     //variables
     "variables": {
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-        "vmName": "dcspmlab-winsrv",
+        "vmName": "asclab-win",
         //"kyv-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
         //"sql-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
         //"sac-role-GUID": "[guid(uniqueString(parameters('roleNameGuid')))]",
