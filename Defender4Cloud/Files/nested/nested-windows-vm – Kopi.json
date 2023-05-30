@@ -67,17 +67,17 @@
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
         "publicIPAddressType": "Dynamic",
-        "vmName": "dcspmlab-nix",
+        "vmName": "dcspmlab-winsrv",
         "vmSize": "Standard_D2s_v3",
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
         //"nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('networkSecurityGroupName'))]",
         "nicName": "[concat(variables('vmName'), '-nic')]",
         "osType": {
-            "publisher": "Canonical",
-            "offer": "0001-com-ubuntu-minimal-kinetic",
-            "sku": "minimal-22_10-gen2",
-            "version": "22.10.202210220",
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-datacenter-gensecond",
+            "version": "17763.3130.220404",
             "osDiskName": "[concat(variables('vmName'), '-osdisk')]",
             "dataDiskName": "[concat(variables('vmName'), '-datadisk')]"
         },
@@ -96,7 +96,16 @@
     },
     //resources
     "resources": [
-
+        // create public ip address
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "name": "[variables('publicIPAddressName')]",
+            "apiVersion": "2021-02-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+            }
+        },
         //create network interface
         {
             "type": "Microsoft.Network/networkInterfaces",
@@ -109,14 +118,19 @@
                     "name": "ipconfig1",
                     "properties": {
                     "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
+                    },
                     "subnet": {
                         "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('subnetName'))]"
                     }
                     }
                 }
                 ]
-            }
-
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]"
+            ]
         },
         //create virtual machine
         {
@@ -135,19 +149,20 @@
                     "computerName": "[variables('vmName')]",
                     "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
-                    "linuxConfiguration": {
-                        "disablePasswordAuthentication": false,
-                        "provisionVMAgent": true,
+                    "windowsConfiguration": {
+                        "enableAutomaticUpdates": false,
+                        "provisionVmAgent": true,
                         "patchSettings": {
-                            "patchMode": "ImageDefault",
-                            "assessmentMode": "ImageDefault"
+                            "enableHotpatching": false,
+                            "assessmentMode": "ImageDefault",
+                            "patchMode": "Manual"
                         }
-                }
+                    }
                 },
                 "storageProfile": {
                 "imageReference": {
-                    "publisher": "[variables('osType').publisher]",
-                    "offer": "[variables('osType').offer]",
+                    "publisher": "MicrosoftWindowsServer",
+                    "offer": "WindowsServer",
                     "sku": "[variables('osType').sku]",
                     "version": "[variables('osType').version]"
                 },
@@ -178,27 +193,6 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"]
         },
-
-        //Custom Script Extension
-        {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
-            "apiVersion": "2015-06-15",
-            "name": "[concat(variables('vmName'),'/CustomScript')]",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]"
-            ],
-            "properties": {
-                "publisher": "Microsoft.Azure.Extensions",
-                "type": "CustomScript",
-                "typeHandlerVersion": "2.0",
-                "autoUpgradeMinorVersion": true,
-                "settings": {},
-                "protectedSettings": {
-                "commandToExecute": "EDITOR='sed -Ei \"s|unattended-upgrades/enable_auto_updates=.+|unattended-upgrades/enable_auto_updates=\\\"no\\\"|\"' dpkg-reconfigure -f editor unattended-upgrades"
-                }
-            }
-        },     
         //Assign Azure Roles - To assign Azure roles you must have Microsoft.Authorization/roleAssignments/write permissions, such as User Access Administrator or Owner
         //Assign Key Vault Access permissions to VM system identity
         {
