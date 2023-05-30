@@ -107,6 +107,8 @@ Continue with the exercise below until the deployment has completed.
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Flabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
+
+
 2.	You will be redirected to Azure Portal > custom deployment page where you should specify mandatory fields for deployment.
 3.	On the subscription field, select **Azure subscription 1**.
 4.	On the resource group field, click on **Create new** and name it as **asclab** (you can pick any name you want or keep the default).
@@ -134,6 +136,9 @@ When the deployment is complete, you should see the following:
 2. **Do another deployment with this deployment file (will add some additional servers for the CSMP module):**
    
    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+
+> ❗Have got feedback that this deployment failes with the following error. Will check how this can be solved. This deployment will only impact "Cloud Security Explorer" the rest of the lab modules should be fine. So not critical if it can't be deployed.
+> ***"Subscription has a quota of 3 for resources of type PublicIpAddress with sku SkuNotSpecified. Subscription currently has 3 resources and the template contains 2 new resources of the this type which exceeds the quota. Please contact support to increase the quota for resource type PublicIpAddress"***
 
    1. You will be redirected to Azure Portal > custom deployment page where you should specify mandatory fields for deployment.
    ![Template deployment CSPM](./Defender4Cloud//Images/215821808-99521c72-065c-4078-af9c-893ac8719e24.png)
