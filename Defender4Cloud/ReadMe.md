@@ -19,6 +19,10 @@ Module 1 represents the prerequesites. the whole module must be completed!
 
 See this README for full description of the prerequisites: [**Prerequisites for Azure Security Trainging**](../README.md)
 
+## More prereqs:
+Deploy API Management service for Module 18:
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.apimanagement%2Fazure-api-management-create%2Fazuredeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+
 
 
 ## Modules
@@ -55,6 +59,9 @@ To be done on the Workshop day:<br>
 - [Alert suppression](./Modules/Module-6-Azure-Defender.md#exercise-2-alert-suppression)
 - [Accessing Security Alerts using Graph Security API](./Modules/Module-6-Azure-Defender.md#exercise-3-accessing-security-alerts-using-graph-security-api)
 
+[**Even more prereqs for Module 18**]
+- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
+
 [**Module 8 – Enhanced Security (L300)**](./Modules/Module-8-Advance-Cloud-Defense.md)
 - [Using JIT to reduce attack surface](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-1-using-jit-to-reduce-attack-surface)
 - [Adaptive Application Control](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-2-adaptive-application-control)
@@ -77,8 +84,21 @@ To be done on the Workshop day:<br>
 - [Simulate alerts on a Windows VM](/Modules/Module-99-simulate-incidents.md#simulate-alerts-on-a-windows-vm)
 - [Simulate AKS alert on Microsoft Defender for Cloud](./Modules/Module-99-simulate-incidents.md#simulate-aks-alert-on-microsoft-defender-for-cloud)
 
+[**Module 18 – Defender for APIs (L300)**](./Modules/Module-18-Defender%20for%20APIs.md)
+- [Create Azure API Mamanegement Service](./Modules/Module-18-Defender%20for%20APIs.md#exercise-1-create-azure-api-management-service)
+- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
+- [Enable Defender for API](./Module-18-Defender%20for%20APIs.md#exercise-3-enable-defender-for-api)
+- [Onboard APIs to Defender for APIs](./Modules/Module-18-Defender%20for%20APIs.md#exercise-4-onboard-apis-to-defender-for-apis)
+- [Explore the Defender for API tile and look at API recommendations in Defender for Cloud](./Modules/Module-18-Defender%20for%20APIs.md#exercise-5-explore-the-defender-for-api-tile-and-look-at-api-recommendations-in-defender-for-cloud)
+- [Trigger an alert "Suspicious user agent detected"](./Modules/Module-18-Defender%20for%20APIs.md#exercise-6-trigger-an-alert-suspicious-user-agent-detected)
 
 ## Extras
+
+
+[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
+- [Install Docker Desktop](./Modules/Module-1-Preparing-the-Environment.md)
+- [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
+- [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
 
 [**Extra: Module 16 - Protecting On-Prem Servers in Defender for Cloud (L300)**](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
 - [Install Hyper-V which will be used to create the server on your own machine](./Modules/Module%2016%20-%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md#exercise-1-install-hyper-v-which-will-be-used-to-create-the-server-on-your-own-machine)
@@ -96,24 +116,6 @@ To be done on the Workshop day:<br>
 - [Exercise 3: Explore Attack Paths in your Environment](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
 - [Exercise 4: Build query with Cloud Security Explorer](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
 - [Exercise 5: Assign Governance Rule](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
-
-[**Module 9 – Defender for Containers (L300)**](./Modules/Module-9-Defender-For-Containers.md)
-- [Install Docker Desktop](./Modules/Module-1-Preparing-the-Environment.md)
-- [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
-- [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
-
-[**Module 18 – Defender for APIs (L300)**](./Modules/Module-18-Defender%20for%20APIs.md)
-- [Create Azure API Mamanegement Service](./Modules/Module-18-Defender%20for%20APIs.md#exercise-1-create-azure-api-management-service)
-- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
-- [Enable Defender for API](./Module-18-Defender%20for%20APIs.md#exercise-3-enable-defender-for-api)
-- [Onboard APIs to Defender for APIs](./Modules/Module-18-Defender%20for%20APIs.md#exercise-4-onboard-apis-to-defender-for-apis)
-- [Explore the Defender for API tile and look at API recommendations in Defender for Cloud](./Modules/Module-18-Defender%20for%20APIs.md#exercise-5-explore-the-defender-for-api-tile-and-look-at-api-recommendations-in-defender-for-cloud)
-- [Trigger an alert "Suspicious user agent detected"](./Modules/Module-18-Defender%20for%20APIs.md#exercise-6-trigger-an-alert-suspicious-user-agent-detected)
-
-[**Module 18 - Agentless container posture through Defender CSPM (L200)**](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#module-19---agentless-container-posture-through-defender-cspm)
-- [Exercise 1: Prepare your environment](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-1-prepare-your-environment)
-- [Exercise 2: Investigate internet exposed Kubernetes pods through the Cloud Security Explorer](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-2-investigate-internet-exposed-kubernetes-pods-through-the-cloud-security-explorer)
-- [Exercise 3: Investigate attack paths](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-3-investigate-attack-paths)
 
 [**Module 10 – GCP (L300)**](./Modules/Module-10-GCP.md)
 - [Create a GCP project](./Modules/Module-10-GCP.md#exercise-1-create-a-gcp-project)
