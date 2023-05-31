@@ -102,6 +102,14 @@ To be done on the Workshop day:<br>
 - [Download vulnerable image from Docker Hub into the Container Registry](./Modules/Module-9-Defender-For-Containers.md#exercise-2-download-vulnerable-image-from-docker-hub-into-the-container-registry)
 - [Investigate the recommendation for vulnerabilities in ACR](./Modules/Module-9-Defender-For-Containers.md#exercise-3-investigate-the-recommendation-for-vulnerabilities-in-acr)
 
+[**Module 18 – Defender for APIs (L300)**](./Modules/Module-18-Defender%20for%20APIs.md)
+- [Create Azure API Mamanegement Service](./Modules/Module-18-Defender%20for%20APIs.md#exercise-1-create-azure-api-management-service)
+- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
+- [Enable Defender for API](./Module-18-Defender%20for%20APIs.md#exercise-3-enable-defender-for-api)
+- [Onboard APIs to Defender for APIs](./Modules/Module-18-Defender%20for%20APIs.md#exercise-4-onboard-apis-to-defender-for-apis)
+- [Explore the Defender for API tile and look at API recommendations in Defender for Cloud](./Modules/Module-18-Defender%20for%20APIs.md#exercise-5-explore-the-defender-for-api-tile-and-look-at-api-recommendations-in-defender-for-cloud)
+- [Trigger an alert "Suspicious user agent detected"](./Modules/Module-18-Defender%20for%20APIs.md#exercise-6-trigger-an-alert-suspicious-user-agent-detected)
+
 [**Module 10 – GCP (L300)**](./Modules/Module-10-GCP.md)
 - [Create a GCP project](./Modules/Module-10-GCP.md#exercise-1-create-a-gcp-project)
 - [Create the GCP connector in Microsoft Defender for Cloud](./Modules/Module-10-GCP.md#exercise-2-create-the-gcp-connector-in-microsoft-defender-for-cloud)
