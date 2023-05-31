@@ -110,6 +110,11 @@ To be done on the Workshop day:<br>
 - [Explore the Defender for API tile and look at API recommendations in Defender for Cloud](./Modules/Module-18-Defender%20for%20APIs.md#exercise-5-explore-the-defender-for-api-tile-and-look-at-api-recommendations-in-defender-for-cloud)
 - [Trigger an alert "Suspicious user agent detected"](./Modules/Module-18-Defender%20for%20APIs.md#exercise-6-trigger-an-alert-suspicious-user-agent-detected)
 
+[**Module 18 - Agentless container posture through Defender CSPM (L200)**](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#module-19---agentless-container-posture-through-defender-cspm)
+- [Exercise 1: Prepare your environment](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-1-prepare-your-environment)
+- [Exercise 2: Investigate internet exposed Kubernetes pods through the Cloud Security Explorer](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-2-investigate-internet-exposed-kubernetes-pods-through-the-cloud-security-explorer)
+- [Exercise 3: Investigate attack paths](./Modules/Module-19-%20Agentless-container-posture-through-Defender-DCSPM.md#exercise-3-investigate-attack-paths)
+
 [**Module 10 – GCP (L300)**](./Modules/Module-10-GCP.md)
 - [Create a GCP project](./Modules/Module-10-GCP.md#exercise-1-create-a-gcp-project)
 - [Create the GCP connector in Microsoft Defender for Cloud](./Modules/Module-10-GCP.md#exercise-2-create-the-gcp-connector-in-microsoft-defender-for-cloud)
