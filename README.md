@@ -105,7 +105,7 @@ Continue with the exercise below until the deployment has completed.
 
 1. Prepare your lab environment by clicking on the blue **Deploy to Azure** button below :
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Flabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2FlabdeployNew.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
 
 
 
