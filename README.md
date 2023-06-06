@@ -132,36 +132,6 @@ When the deployment is complete, you should see the following:
 ![Template deployment completed](./Defender4Cloud/Images/asc-deployment-completed.gif?raw=true)
 
 <br>
-
-2. **Do another deployment with this deployment file (will add some additional servers for the CSMP module):**
-   
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2Fdcspmlabdeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
-
-> 31.05.23 kl 14:15: Still some issues with this deployment for some. If you are able to deploy, thats perfect. If you get any error, thats fine to. Skipp it and continue with the preparation. This deployment is not critical for the Lab at any kind.
-> 
-> 30.05.23 kl 15:50: Fixed again by adding these configuration changes to existing VMs insted of creating two new VMs
-> 
-> 30.05.23 kl 14:10: hit new quota limit on CPU cores. Removing this deployment as it is only a minor module.
-> 
-> 30.05.23 kl 13:45: Fixed: Removed publicIP deployment for these two servers to be within the trial subscription quota
-> 
-> ❗30.05.23 kl 11:40: Have got feedback that this deployment failes with the following error. Will check how this can be solved. This deployment will only impact "Cloud Security Explorer" the rest of the lab modules should be fine. So not critical if it can't be deployed.
-> ***"Subscription has a quota of 3 for resources of type PublicIpAddress with sku SkuNotSpecified. Subscription currently has 3 resources and the template contains 2 new resources of the this type which exceeds the quota. Please contact support to increase the quota for resource type PublicIpAddress"***
-
-   1. You will be redirected to Azure Portal > custom deployment page where you should specify mandatory fields for deployment.
-   ![Template deployment CSPM](./Defender4Cloud//Images/215821808-99521c72-065c-4078-af9c-893ac8719e24.png)
-   2. On the subscription field, select Azure subscription used in Module 1.
-   3. On the Resource group field, click on select existing and select asclab (you can pick any name you want or keep the default).
-   4. On the Instance Details section, select the data center region you deployed the ARM Template in Module 1 (all downstream resources will be created in the same region as the resource group).
-   5. Select Admin Username and Admin password that will be used for Windows Virtual Machine and Linux Virtual Machine you are deploying. Notice that password must be between 12 and 72 characters and have 3 of the following: 1 lower case, 1 upper case, 1 number and 1 special character.
-   6. Select Storage Account Name (asclabsa[uniqestring]), Key Vault Name (asclab-kv-[uniqestring]), and Sql Server Name (asclab-sql-[uniqestring]) you already deployed in Module 1.
-   7. Click Review + create to start the validation process. Once validation passed, click on Create to start the ARM deployment on your subscription.
-   8. The deployment takes about 10 minutes to complete. The deployment is in progress page continues to update and show the resources being uploaded to the environment assuming the deployment is successful.
-
-
-
-
-<br>
 <br>
 
 ## Step 3: Enabling Microsoft Defender for Cloud
