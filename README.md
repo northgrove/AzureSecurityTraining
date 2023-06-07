@@ -246,7 +246,7 @@ Make sure that:
 <br>
 <br>
 
-## Confirmation - Azure Security Training: Microsoft Oslo, 1.june 2023
+## Confirmation - Azure Security Training: TechnoCamp 10.june 2023
 To confirm you have successfully deployed the lab and are ready for the workshop, please send an email to kjetil.nordlund@microsoft.com. See you there!
 
 <br>
