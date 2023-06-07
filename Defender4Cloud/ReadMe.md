@@ -19,9 +19,9 @@ Module 1 represents the prerequesites. the whole module must be completed!
 
 See this README for full description of the prerequisites: [**Prerequisites for Azure Security Trainging**](../README.md)
 
-## More prereqs:
-Deploy API Management service for Module 18:
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.apimanagement%2Fazure-api-management-create%2Fazuredeploy.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
+
+[**Even more prereqs for Module 18**]
+- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
 
 
 
@@ -59,8 +59,6 @@ To be done on the Workshop day:<br>
 - [Alert suppression](./Modules/Module-6-Azure-Defender.md#exercise-2-alert-suppression)
 - [Accessing Security Alerts using Graph Security API](./Modules/Module-6-Azure-Defender.md#exercise-3-accessing-security-alerts-using-graph-security-api)
 
-[**Even more prereqs for Module 18**]
-- [Publish an API within API Managament](./Modules/Module-18-Defender%20for%20APIs.md#exercise-2-publish-an-api-within-api-management)
 
 [**Module 8 – Enhanced Security (L300)**](./Modules/Module-8-Advance-Cloud-Defense.md)
 - [Using JIT to reduce attack surface](./Modules/Module-8-Advance-Cloud-Defense.md#exercise-1-using-jit-to-reduce-attack-surface)
