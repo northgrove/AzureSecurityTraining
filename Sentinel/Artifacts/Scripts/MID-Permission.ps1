@@ -4,7 +4,7 @@ param (
 )
 
 $GraphAppId = "00000003-0000-0000-c000-000000000000"
-$PermissionName = "Directory.Read.All"
+$PermissionNames = @('Directory.Read.All', 'Directory.ReadWrite.All', 'User.ReadWrite.All', 'User.Read.All')
 
  
 
@@ -33,14 +33,20 @@ $MSI = (Get-AzureADServicePrincipal -Filter "displayName eq '$DisplayNameOfMSI'"
 write-host "Found $($msi.displayname) with appid: $($msi.appid)"
 Start-Sleep -Seconds 10
 $GraphServicePrincipal = Get-AzureADServicePrincipal -Filter "appId eq '$GraphAppId'"
-write-host "Adding new permission: $PermissionName"
-$AppRole = $GraphServicePrincipal.AppRoles | Where-Object {$_.Value -eq $PermissionName -and $_.AllowedMemberTypes -contains "Application"}
-try {
-    New-AzureAdServiceAppRoleAssignment -ObjectId $MSI.ObjectId -PrincipalId $MSI.ObjectId -ResourceId $GraphServicePrincipal.ObjectId -Id $AppRole.Id
+write-host "Adding new permission: $PermissionNames"
+
+foreach ($PermissionName in $PermissionNames) {
+
+    $AppRole = $GraphServicePrincipal.AppRoles | Where-Object {$_.Value -eq $PermissionName -and $_.AllowedMemberTypes -contains "Application"}
+    try {
+        New-AzureAdServiceAppRoleAssignment -ObjectId $MSI.ObjectId -PrincipalId $MSI.ObjectId -ResourceId $GraphServicePrincipal.ObjectId -Id $AppRole.Id
+    }
+    catch {
+        write-host "something went wrong..."
+        write-host $_
+        $erroroccured = $true
+    }
+    if (!$erroroccured) {write-host "Permission $PermissionName added"}
 }
-catch {
-    write-host "something went wrong..."
-    write-host $_
-    $erroroccured = $true
-}
-if (!$erroroccured) {write-host "Permission added"}
+
+write-host "Done"
