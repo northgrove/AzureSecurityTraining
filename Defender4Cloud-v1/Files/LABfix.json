@@ -1,0 +1,156 @@
+{
+
+"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+"contentVersion": "1.0.0.0",
+"parameters": {
+    "storageAccountType": {
+        "type": "string",
+        "defaultValue": "Standard_LRS",
+        "allowedValues": [
+            "Standard_LRS",
+            "Standard_ZRS",
+            "Standard_GRS",
+            "Standard_RAGRS",
+            "Premium_LRS"
+        ]
+    },
+    "resourceTags": {
+        "type": "object",
+        "defaultValue": {
+            "Demo": "ASC",
+            "ProvisionedBy": "CxE"
+        }
+    }
+},
+"variables": {
+
+    "appServicePlanName": "asclab-splan2",
+    "appServiceName": "[toLower(concat('asclab2-app-', uniqueString(subscription().subscriptionId)))]",
+    "kvName": "[toLower(concat('asclab2-kv-',uniqueString(subscription().subscriptionId)))]",
+    "storageName": "[toLower(concat('asclabsa2', uniqueString(subscription().subscriptionId)))]",
+    "functionName": "[toLower(concat('asclab2-fa-',uniqueString(subscription().subscriptionId)))]"
+},
+"resources": [
+    {
+        "name": "[variables('storageName')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "location": "[resourceGroup().location]",
+        "apiVersion": "2019-06-01",
+        "sku": {
+            "name": "[parameters('storageAccountType')]"
+        },
+        "dependsOn": [],
+        "tags": "[parameters('resourceTags')]",
+        "kind": "StorageV2",
+        "properties": {
+            "supportsHttpsTrafficOnly": false
+        }
+    },
+    {
+        "name": "[variables('appServicePlanName')]",
+        "type": "Microsoft.Web/serverfarms",
+        "location": "[resourceGroup().location]",
+        "apiVersion": "2015-08-01",
+        "sku": {
+            "name": "S1"
+        },
+        "dependsOn": [],
+        "tags": "[parameters('resourceTags')]",
+        "properties": {
+            "name": "[variables('appServicePlanName')]",
+            "numberOfWorkers": 1
+        }
+    },
+    {
+        "type": "Microsoft.KeyVault/vaults",
+        "name": "[variables('kvName')]",
+        "apiVersion": "2016-10-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "sku": {
+                "family": "A",
+                "name": "standard"
+            },
+            "tenantId": "[subscription().tenantid]",
+            "accessPolicies": [
+                {
+                    "tenantId": "[subscription().tenantid]",
+                    "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('functionName')),'2019-08-01', 'full').identity.principalId]",
+                    "permissions": {
+                        "keys": [],
+                        "secrets": [
+                            "get"
+                        ],
+                        "certificates": []
+                    }
+                }
+            ],
+            "enabledForDeployment": false,
+            "enabledForDiskEncryption": false,
+            "enabledForTemplateDeployment": false
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', variables('appServiceName'))]"
+        ],
+        "tags": "[parameters('resourceTags')]"
+    },
+    {
+        "name": "[variables('appServiceName')]",
+        "type": "Microsoft.Web/sites",
+        "location": "[resourceGroup().location]",
+        "apiVersion": "2015-08-01",
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        ],
+        "tags": "[parameters('resourceTags')]",
+        "properties": {
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        }
+    },
+    {
+        "type": "Microsoft.Web/sites",
+        "kind": "functionapp",
+        "name": "[variables('functionName')]",
+        "apiVersion": "2016-08-01",
+        "location": "[resourceGroup().location]",
+        "identity": {
+            "type": "SystemAssigned"
+        },
+        "properties": {
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+            "siteConfig": {
+                "appSettings": [
+                    {
+                        "name": "AzureWebJobsStorage",
+                        "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')),'2015-05-01-preview').key1)]"
+                    },
+                    {
+                        "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+                        "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')),'2015-05-01-preview').key1)]"
+                    },
+                    {
+                        "name": "WEBSITE_CONTENTSHARE",
+                        "value": "[toLower(variables('functionName'))]"
+                    },
+                    {
+                        "name": "FUNCTIONS_EXTENSION_VERSION",
+                        "value": "~2"
+                    },
+                    {
+                        "name": "WEBSITE_NODE_DEFAULT_VERSION",
+                        "value": "~10"
+                    },
+                    {
+                        "name": "FUNCTIONS_WORKER_RUNTIME",
+                        "value": "dotnet"
+                    }
+                ]
+            }
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        ],
+        "tags": "[parameters('resourceTags')]"
+    }
+]
+}

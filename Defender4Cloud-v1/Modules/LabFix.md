@@ -1,0 +1,2 @@
+Fix to redeploy App service plan with Web App and function app
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnorthgrove%2FAzureSecurityTraining%2Fmain%2FDefender4Cloud%2FFiles%2FLABfix.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>

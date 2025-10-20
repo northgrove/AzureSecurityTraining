@@ -28,6 +28,7 @@ else {
 
 write-host "Connecting to Azure AD tenant"
 Connect-AzureAD -TenantId $TenantID
+
 write-host "Finding the Logic App.."
 $MSI = (Get-AzureADServicePrincipal -Filter "displayName eq '$DisplayNameOfMSI'")
 write-host "Found $($msi.displayname) with appid: $($msi.appid)"
