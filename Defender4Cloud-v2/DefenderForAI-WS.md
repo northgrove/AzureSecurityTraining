@@ -24,24 +24,11 @@ For Defender for AI releated modules only, do module: 24 and 25
 - [Exploring Secure Score and Recommendations](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-2-exploring-secure-score-and-recommendations)
 - [Exploring the Inventory capability](./Modules/Module-2-Exploring-Azure-Security-Center.md#exercise-3-exploring-the-inventory-capability)
  
-[**Module 3 – Security Policy (L200)**](./Modules/Module-3-ASC-Security-Policy.md)
-- [Overview of the security policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-1-overview-of-the-asc-policy)
-- [Explore Azure Policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-2-explore-azure-policy)
-- [Create resource exemption for a recommendation](./Modules/Module-3-ASC-Security-Policy.md#exercise-3-create-resource-exemption-for-a-recommendation)
-- [Create a policy enforcement and deny](./Modules/Module-3-ASC-Security-Policy.md#exercise-4-create-a-policy-enforcement-and-deny)
-- [Create a custom policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-5-create-a-custom-policy)
-
 [**Module 6 – Microsoft Defender Plans (L300)**](./Modules/Module-6-Azure-Defender.md)
 - [Alert validation](./Modules/Module-6-Azure-Defender.md#exercise-1-alert-validation)
 - [Alert suppression](./Modules/Module-6-Azure-Defender.md#exercise-2-alert-suppression)
 - [Accessing Security Alerts using Graph Security API](./Modules/Module-6-Azure-Defender.md#exercise-3-accessing-security-alerts-using-graph-security-api)
 
-[**Module 17 - Defender CSPM (L200)**](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md)
-- [Exercise 1: Preparing the Environment for DCSPM plan](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-1-preparing-the-environment-for-dcspm-plan)
-- [Exercise 2: Enabling Defender CSPM plan](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-2-enabling-defender-cspm-plan)
-- [Exercise 3: Explore Attack Paths in your Environment](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
-- [Exercise 4: Build query with Cloud Security Explorer](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
-- [Exercise 5: Assign Governance Rule](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
 
 [**Module 24 - Security for AI Workloads**](./Modules/Module%2024%20-%20AI%20Workloads.md)
 * [Exercise 1: Enable AI Workloads](./Modules/Module%2024%20-%20AI%20Workloads.md#Exercise-1:-Enable-AI-Workloads)
@@ -53,3 +40,17 @@ For Defender for AI releated modules only, do module: 24 and 25
 * [Exercise 3: Running Individual and Combined Attack Scenarios](./Modules/Module%2025%20-%20Defender%20XDR%20Integration.md#step-3-running-individual-and-combined-attack-scenarios)
 * [Exercise 4: Observing and Analyzing MDC Alerts](./Modules/Module%2025%20-%20Defender%20XDR%20Integration.md#step-4-observing-and-analyzing-mdc-alerts)
 * [Exercise 5: Correlating and Responding to Incidents Using XDR](./Modules/Module%2025%20-%20Defender%20XDR%20Integration.md#step-5-correlating-and-responding-to-incidents-using-xdr)
+
+[**Module 17 - Defender CSPM (L200)**](./Modules/Module%2017%20%E2%80%93Defender%20CSPM.md)
+- [Exercise 1: Preparing the Environment for DCSPM plan](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-1-preparing-the-environment-for-dcspm-plan)
+- [Exercise 2: Enabling Defender CSPM plan](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-2-enabling-defender-cspm-plan)
+- [Exercise 3: Explore Attack Paths in your Environment](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-3-explore-attack-paths-in-your-environment)
+- [Exercise 4: Build query with Cloud Security Explorer](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-4-build-query-with-cloud-security-explorer)
+- [Exercise 5: Assign Governance Rule](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Labs/Modules/Module%2017%20%E2%80%93Defender%20CSPM.md#exercise-5-assign-governance-rule)
+
+[**Module 3 – Security Policy (L200)**](./Modules/Module-3-ASC-Security-Policy.md)
+- [Overview of the security policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-1-overview-of-the-asc-policy)
+- [Explore Azure Policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-2-explore-azure-policy)
+- [Create resource exemption for a recommendation](./Modules/Module-3-ASC-Security-Policy.md#exercise-3-create-resource-exemption-for-a-recommendation)
+- [Create a policy enforcement and deny](./Modules/Module-3-ASC-Security-Policy.md#exercise-4-create-a-policy-enforcement-and-deny)
+- [Create a custom policy](./Modules/Module-3-ASC-Security-Policy.md#exercise-5-create-a-custom-policy)

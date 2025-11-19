@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "c:\\Users\\kjnordlu\\.vscode\\extensions\\ms-security.ms-sentinel-1.0.0\\python"
+    ]
+}
