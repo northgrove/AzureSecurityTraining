@@ -8,7 +8,7 @@ To do the full Defender for Cloud lab, please visist:
 
 The modules are picked to give an introduction to Defender for Cloud and common services as CSPM and workload protection with examples to how to handle and follow up recommendations and alerts. And then som spesific task for Defender for AI.
 
-For Defender for AI releated modules only, do module: 24 and 25
+For Defender for AI releated modules only, do module: 24.1
 
 
 
