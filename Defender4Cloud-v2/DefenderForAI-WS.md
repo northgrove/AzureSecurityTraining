@@ -12,6 +12,23 @@ For Defender for AI releated modules only, do module: 24 and 25
 
 
 
+### Main AI Module
+
+[**Module 24.1 - Security for AI Workloads**](./Modules/Module%2024.1%20-%20AI%20Workloads%20adv.md)
+* [Exercise 1: Enable AI Workloads](./Modules/Module%2024.1%20-%20AI%20Workloads%20adv.md#Exercise-1:-Enable-AI-Workloads)
+* [Exercise 2: Simulate Jailbreak Attacks](./Modules/Module%2024.1%20-%20AI%20Workloads%20adv.md#Exercise-2:-Simulate-Jailbreak-Attacks)
+* [Exercise 3: Simulate malicious URL detection](./Modules/Module%2024.1%20-%20AI%20Workloads%20adv.md#Exercise-3:-Simulate-malicious-URL-detection)
+* [Exercise 4: Enable AI Posture Management](./Modules/Module%2024.1%20-%20AI%20Workloads%20adv.md#Exercise-4:-Enable-AI-Posture-Management)
+
+<br>
+<br>
+<br>
+
+### Optional Defender for Cloud Modules
+
+
+
+
 
 
 [**Module 1 – Preparing the Environment (L100)**](./Modules/Module-1-Preparing-the-Environment.md)
@@ -30,9 +47,7 @@ For Defender for AI releated modules only, do module: 24 and 25
 - [Accessing Security Alerts using Graph Security API](./Modules/Module-6-Azure-Defender.md#exercise-3-accessing-security-alerts-using-graph-security-api)
 
 
-[**Module 24 - Security for AI Workloads**](./Modules/Module%2024%20-%20AI%20Workloads.md)
-* [Exercise 1: Enable AI Workloads](./Modules/Module%2024%20-%20AI%20Workloads.md#Exercise-1:-Enable-AI-Workloads)
-* [Exercise 2: Simulate Jailbreak Attacks](./Modules/Module%2024%20-%20AI%20Workloads.md#Exercise-2:-Simulate-Jailbreak-Attacks)
+
 
 [**Module 25 - Defender XDR Integration**](./Modules/Module%2025%20-%20Defender%20XDR%20Integration.md)
 * [Exercise 1: Setting Up the Environment](./Modules/Module%2025%20-%20Defender%20XDR%20Integration.md#step-1-setting-up-the-environment)

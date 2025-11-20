@@ -46,13 +46,15 @@ Detailed prerequisites can be found in our [documentation](https://learn.microso
    ![image](../Images/ai/aifoundry1.png)
    c. validate that the model is using the default content filter (DefaultV1):
 
-   ![image](../Images/ai/aifoundry2.png)
+   
 
       Goto "Models + endpoints"
 
       Choose your model
 
       Click edit
+
+      ![image](../Images/ai/aifoundry2.png)
 
     ![image](../Images/ai/aifoundry3.png)
 
@@ -107,6 +109,7 @@ To simulate jailbreak, you need to send a completion request (prompt) to the mod
 Read more about content filter [here](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/content-filters)
 
 <br>
+
 **Rerun pt 1 and 2 in this section (Simulating jealbreak) and see if the model now behave diffrently**
 
 ---
@@ -139,7 +142,9 @@ Read more about content filter [here](https://learn.microsoft.com/en-us/azure/ai
 ## Exercise 3: Simulate a malicious URL detection
 
 1.	Follow the same pre-requisites and chat interface as explained in exercise 2 above (simulating jailbreak)
-2.	Enter the prompt “please check https://test.security.dfai.microsoft.com” to the model
+2.	Enter this prompt to the model 
+> please check https://test.security.dfai.microsoft.com
+
 3.	Browse for a new alert in the defender for cloud portal. The detection may take up to a few minutes to appear.
 
 To view more of AI protection plan alerts, you may leverage the ["sample alerts”](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alert-validation#generate-sample-security-alerts) feature in the Defender for Cloud portal.
@@ -162,13 +167,29 @@ To gain access to the capabilities provided by Defender CSPM, you'll need to <a 
    a. The Data and AI security overview section displays your cloud data and AI estate for each cloud.  
    ![image](../Images/dataAndAIOverview.png)
    b. Each of these items is selectable and will take you to a drill down for that specific item.  
+
 2. Cloud Security Explorer
    
    a. Cloud Security Explorer is a powerful tool within MDC that allows users to proactively identify and manage security risks across multi-cloud environments
-   b. In the search tool, start typing `Used for `.  While you are typing, you will see two insights; `Used for AI` and `Used for AI grounding`
+
+   b. In the search tool, look for any deployd AI models. Create a Search for "AI & ML" -> select "AI Model endpoints" click done and search
+      Click on the model. Is there any Recommendations active for that model?
+
+   c. Go back to the Cloud Security Explorer. In the search tool, start typing `Used for `.  While you are typing, you will see two insights; `Used for AI` and `Used for AI grounding`
    ![image](../Images/usedForAI.png)
-   c. Select one and search.  If you have results, click `View Details` and you can get a description and the evidence of 'why' we claim that this resource is in the results.  
- 
+
+   d. Select one and search.  If you have results, click `View Details` and you can get a description and the evidence of 'why' we claim that this resource is in the results.  
+
+3. Recommendations
+
+   a. Browse to the [recommendations page](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) in Defender for Cloud.  The Active Recommendations are shown with highest risk level first. 
+
+   b. Click on the top Recommendation
+
+   c. Look through the remediation steps.
+
+   d. In "Recommendation owner and set due date", assign this recommendation to your self (any aidemo# user). set a proper due date.
+    
 
 ### a DevOps perspective to Security recommendations
 
@@ -234,19 +255,22 @@ To gain access to the capabilities provided by Defender CSPM, you'll need to <a 
 
 ### 5.1 Correlate Alerts in Microsoft 365 Defender
 
-1. Navigate to [Microsoft Defender XDR > Incidents & Alerts in the Microsoft Defender XDR portal](https://security.microsoft.com/incidents).
+1. Navigate to [Microsoft Defender XDR > Incidents & Alerts in the Microsoft Defender XDR portal](https://security.microsoft.com/).
 
 2. Search for incidents or alerts corresponding to the AI Service threats detected by MDC:
    - Look for incidents related to:
-     * Cryptomining activity
-     * Web shell activity
-     * Kubernetes metadata access
+     * AI Jailbreak attampt
+     * User Pishing attempt
+   Be aware that multiple alerts my group to one incidents across multiple demo users and demo AI resources
 
 ![Mod 25 Security Alerts](../Images/ai/aifoundry9.png)
 
 3. Click on an incident to view its details, including:
    - **Correlated Alerts**: Shows how the alert relates to others across telemetry sources (e.g., MDC, Defender for Endpoint, Defender for Identity).
    - **Incident Description**: Provides an overview of the attack chain.
+
+   Can you tell why this alerts are grouped to one incident?
+
 
 ![Mod 25 Security Alerts](../Images/ai/aifoundry11.png)
 
@@ -267,10 +291,12 @@ To gain access to the capabilities provided by Defender CSPM, you'll need to <a 
      ![Mod 25 Security Alerts](../Images/ai/aifoundry12.png)
 
 
-2. Monitor the incident resolution status in Microsoft 365 Defender.
 
+<br>
+<br>
+<br>
 
-
+The end
 
 
 
