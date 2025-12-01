@@ -193,7 +193,7 @@ To gain access to the capabilities provided by Defender CSPM, you'll need to <a 
 
 ### a DevOps perspective to Security recommendations
 
-1. Open [Ai Foundry portal](https://ai.portal.com)
+1. Open [Ai Foundry portal](https://ai.azure.com)
 2. Goto "Guardrails + controls" and choose the "Security recommendations" tab
 
 ![image](../Images/ai/aifoundry7.png)
